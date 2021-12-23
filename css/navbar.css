@@ -1,0 +1,168 @@
+/*
+Author: Elaiah S. Asperin
+Created: 21 December 2021
+Last Modified: 21 December 2021
+Description: Navigation bar stylesheet for "AI: The Inner Workings"
+*/
+
+
+/* ========================================================================= */
+
+
+/* General Styles */
+
+.navbar {
+    overflow: hidden;
+    transition: width 600ms ease;
+    
+    background-color: var(--bg-primary);
+
+    position: fixed;
+    z-index: 1;
+}
+  
+.navbar-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    list-style: none;
+
+    height: 100%;
+
+    padding: 0;
+    margin: 0;
+}
+  
+.nav-item {
+    width: 100%;
+}
+
+.nav-item:last-child {
+    margin-top: auto;
+}
+  
+.nav-link {
+    display: flex;
+    align-items: center;
+
+    color: var(--text-primary);
+    text-decoration: none;
+
+    height: 5rem;
+
+    transition: var(--transition-speed);
+}
+  
+.nav-link:hover {
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+}
+  
+.link-text {
+    display: none;
+    margin-left: 1rem;
+}
+
+.nav-link img {
+    width: 2.5rem;
+    height: 2.5rem;
+
+    margin: 0 1.25rem;
+
+    border-radius: 50%;
+}
+  
+.logo {
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 0.3ch;
+
+    background: var(--bg-secondary);
+    width: 100%;
+
+    margin-bottom: 1rem;
+}
+  
+.logo img {
+    transform: rotate(0deg);
+    transition: var(--transition-speed);
+}
+  
+.logo-text {
+    display: inline;
+
+    color: var(--text-secondary);
+
+    width: calc(20rem - 80px);
+
+    position: absolute;
+    left: -999px;
+
+    transition: var(--transition-speed);
+}
+  
+.navbar:hover .logo img {
+    transform: rotate(-180deg);
+    transition: var(--transition-speed);
+}
+
+
+/* ========================================================================= */
+
+
+/* Media Queries */
+
+/* For small screens */
+@media only screen and (max-width: 640px) {
+    /* Positions the navbar at the bottom of the site */
+    .navbar {
+        width: 100vw;
+        height: 5rem;
+        bottom: 0;
+    }
+
+    /* Removes the arrows at the top of the navbar */
+    .logo {
+        display: none;
+    }
+
+    /* Arranges the elements in the navbar as a row */
+    .navbar-nav {
+        flex-direction: row;
+    }
+
+    /* Aligns the navbar links to the center of their containers */
+    .nav-link {
+        justify-content: center;
+    }
+}
+  
+/* For large screens (min-width is set to 641px instead of 640px to avoid
+bug #001) */
+@media only screen and (min-width: 641px) {
+    /* Positions the navbar at the left side of the site */
+    .navbar {
+        width: 5rem;
+        height: 100%;
+        top: 0;
+    }
+
+    /* Expands the navbar when the user hovers over it */
+    .navbar:hover {
+        width: 20rem;
+    }
+
+    /* Makes the link text visible when the user hovers over the navbar */
+    .navbar:hover .link-text {
+        display: inline;
+    }
+
+    /* Makes the title of the site appear after the arrows at the top of the
+    navbar */
+    .navbar:hover .logo-text {
+        left: 80px;
+    }
+}

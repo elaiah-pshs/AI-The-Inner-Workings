@@ -1,0 +1,110 @@
+/*
+Author: Elaiah S. Asperin
+Created: 21 December 2021
+Last Modified: 21 December 2021
+Description: General stylsheet for "AI: The Inner Workings"
+*/
+
+
+/* ========================================================================= */
+
+
+/* Imported Styles
+These are the styles from the other stylesheets in the ./css folder */
+
+@import "navbar.css";
+@import "title.css";
+@import "footer.css";
+
+
+/* ========================================================================= */
+
+
+/* General Styles */
+
+:root {
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+
+    --text-primary: rgb(182, 182, 182);
+    --text-secondary: rgb(236, 236, 236);
+    --bg-primary: rgb(9, 73, 120);
+    --bg-secondary: rgb(6, 50, 81);
+    --transition-speed: 500ms;
+}
+
+body {
+    color: white;
+    background-color: rgb(10, 20, 31);
+
+    margin: 0px;
+    padding: 0px;
+}
+
+main {
+    margin-left: 5rem;
+    padding: 1rem;
+}
+
+hr {
+    background-color: white;
+    box-sizing: border-box;
+
+    width: calc(100% - 200px);
+    height: 6px;
+
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border: 1px solid white;
+    border-radius: 3px;
+}
+
+main a:link, main a:visited {
+    color: white;
+    transition: color var(--transition-speed) ease;
+    text-decoration: none;
+}
+
+main a:hover, main a:active {
+    color: #A3E3F3;
+    transition: color var(--transition-speed) ease;
+    text-decoration: none;
+}
+
+
+/* ========================================================================= */
+
+
+/* Scrollbar Styles */
+
+body::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--bg-primary);
+    border-radius: 0.25rem;
+}
+
+
+/* ========================================================================= */
+
+
+/* Media Queries */
+
+/* For small screens */
+@media only screen and (max-width: 640px) {
+    /* Removes the scrollbar */
+    body {
+        overflow: hidden;
+    }
+
+    /* Transfers the margin of main from the left to the bottom */
+    main {
+        margin: 0px 0px 80px 0px;
+    }
+}
