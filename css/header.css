@@ -1,0 +1,130 @@
+/*
+Author: Elaiah S. Asperin
+Created: 17 December 2021
+Last Modified: 18 December 2021
+Description: Header stylesheet for "AI: The Inner Workings"
+*/
+
+
+/* ========================================================================= */
+
+
+/* General Styles */
+
+/* 
+To be used for something in the future
+
+:root {
+    --text-primary: white;
+    --text-secondary: #A3E3F3;
+    --bg-primary: rgba(6, 80, 122, 0.5);
+    --bg-secondary: rgba(9, 123, 173, 0.5);
+}
+*/
+
+body > header {
+    background-color: rgb(7, 30, 61);
+
+    box-sizing: border-box;
+    width: 100%;
+
+    padding: 10px;
+    margin: 0px;
+
+    position: fixed;
+    z-index: 2;
+}
+
+body > header img {
+    width: 60px;
+    height: 60px;
+
+    margin-left: 20px;
+    border-radius: 30px;
+
+    float: left;
+}
+
+body > header > h3 {
+    color: white;
+    margin: 17.8px 0px 0px 20px;
+    float: left;
+}
+
+body > header > nav {
+    width: 550px;
+    float: right;
+}
+
+body > header > nav > a {
+    text-align: center;
+    
+    background: rgba(6, 80, 122, 0.5);
+
+    width: 100px;
+    border-radius: 14.2px;
+
+    padding: 5px 0px;
+    margin-top: 17.8px;
+    margin-right: 10px;
+
+    float: right;
+}
+
+header > a:nth-child(4) {
+    display: none;
+}
+
+i.fa.fa-bars {
+    font-size: 60px;
+}
+
+
+/* ========================================================================= */
+
+
+/* Adaptive Styles */
+
+@media screen and (max-width: 924.562px) {
+    nav {
+        display: none;
+    }
+
+    header > a:nth-child(4) {
+        margin-right: 10px;
+        float: right;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 924.562px) {
+    header.responsive {
+        position: fixed;
+    }
+
+    header.responsive > a:nth-child(4) {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+
+    header.responsive > nav {
+        display: block;
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    header.responsive > nav > a {
+        text-align: left;
+        font-size: 16px;
+
+        width: calc(100% - 20px);
+
+        padding-left: 10px;
+        margin-top: 5px;
+        margin-left: 10px;
+
+        display: block;
+        float: none;
+    }
+}

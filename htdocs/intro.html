@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+
+        <!-- Helps the website scale well when the window is resized -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="author" content="Elaiah S. Asperin">
+        <meta name="description" content="A website about AI">
+        <meta name="keywords" content="Artificial Intelligence, AI">
+        <meta name="date" content="10/23/2021">
+        <meta name="revised" content="11/11/2021">
+
+        <link rel="icon" href="../images/icon.png">
+
+        <!-- stylesheets from the web -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        
+        <!-- personal stylesheets -->
+        <link rel="stylesheet" href="../css/index.css">
+        <link rel="stylesheet" href="../css/pages/intro.css">
+
+        <!-- javascript to make the navbar scalable -->
+        <script src="../js/index.js"></script>
+
+        <title>Introduction to AI</title>
+    </head>
+
+    <body>
+        <!-- Navigation Bar frozen at the top of the site -->
+        <header>
+            <a href="home.html" class="active">
+                <img src="../images/logo.png">
+            </a>
+
+            <h3>AI: The Inner Workings</h3>
+
+            <nav>
+                <a href="uses.html">Uses</a>
+                <a href="development.html">Development</a>
+                <a href="myths.html">Myths</a>
+                <a href="#top">Intro</a>
+                <a href="home.html">Home</a>
+            </nav>
+
+            <a href="javascript:void(0);" onclick="dropdown()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </header>
+        
+        <!-- Main contents of the site, from title to footer -->
+        <section>
+            <header>
+                <h1>Intro to AI</h1>
+                <h2>What exactly is AI?</h2>
+                <a href="https://www.ai-cube.eu/events/17th-international-conference-on-artificial-intelligence-applications-and-innovations/">
+                    <span></span>
+                </a>
+            </header>
+
+            <hr class="transition">
+
+            <!-- Bootstrap grid containing all the main text of the site -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h3>Intelligence</h3>
+                        <p>
+
+Before we can understand artificial intelligence, we must first understand
+what intelligence is. We do not have an exact definition for intelligence, but
+in this context, intelligence is the ability of something to:
+
+<ol>
+    <li>
+        Reason
+    </li>
+    <ul>
+        <li>
+            This refers to the ability of something to find connections between
+            two pieces of information
+        </li>
+    </ul>
+    <li>
+        Learn
+    </li>
+    <ul>
+        <li>
+            This refers to the ability of something to gain knowledge or skill
+            by study, experience, or being taught.
+        </li>
+    </ul>
+    <li>
+        Solve
+    </li>
+    <ul>
+        <li>
+            This refers to the ability of something to find an answer to a
+            problem
+        </li>
+    </ul>
+    <li>
+        Perceive
+    </li>
+    <ul>
+        <li>
+            This refers to the ability of something to gather information
+            about its surroundings
+        </li>
+    </ul>
+    <li>
+        Communicate
+    </li>
+    <ul>
+        <li>
+            This refers to the ability of something to share information
+        </li>
+    </ul>
+</ol>
+
+                        </p>
+                    </div>
+                    <div class="col-sm-6">
+                        <img src="../images/intro/image1.jpg">
+                    </div>
+                </div>
+
+                <hr class="transition">
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <img 
+                            src="../images/intro/image2.jpg"
+                            style="margin-bottom: 10px;"
+                        />
+                    </div>
+                    <div class="col-sm-6">
+                        <h3>Agents and Environments</h3>
+                        <p>
+
+To help us visualize how an intelligent system can perceive its surroundings,
+we shall take a brief look at the concept of agents and environments.
+<ul>
+    <li>
+        An agent is any system that can perceive its evironment using sensors
+        and react to its environment using effectors.
+    </li>
+    <li>
+        We can think of sensors as input devices that gather information
+        related to the agent's surroundings. Meanwhile, we can think of
+        effectors as output devices that are dependent on the information
+        gathered by the sensors.
+    </li>
+    <li>
+        For example, we can think of humans as agents with sensory organs
+        (eyes, ears, nose, toungue, ans skin) as sensors and muscles as
+        effectors.
+    </li>
+    <li>
+        We can also think of robots as agents. They would have cameras,
+        microphones, and other similar devices as sensors. They would also have
+        motors, speakers, and other similar devices as effectors.
+    </li>
+    <li style="margin-bottom: 10px;">
+        Finally, we can also think of software robots (or softbots, as they are
+        commonly referred to) as agents who have input fields as sensors and
+        output fields as effectors.
+    </li>
+    <li>
+        An environment is the area wherein an agent operates. This environment
+        can either be in the real world (such as the environment of human and
+        robotic agents) or in an artificial world. 
+    </li>
+    <li>
+        The environment of human and robotic agents is the real world.
+        Meanwhile, the environment of softbots are artificial worlds whose
+        conditions are controlled by a programmer. These artificial world
+        usually consist of large databases, extensive file systems, countless
+        input fields, and several output screens.
+    </li>
+</ul>
+
+                        </p>
+                    </div>
+                </div>
+
+                <hr class="transition" style="margin-top: 30px;">
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h3>The Premise</h3>
+                        <p>
+
+<b>Artificial Intelligence is a man-made machine, usually a computer of some
+sort, that can think like man to some degree</b>. However, considering most of
+the machines we see everyday do not possess any sign of intelligence, can we
+even make a machine that can think?
+
+                        </p>
+                        <p>
+
+To settle this question, a mathematician named Alan Turing proposed a test that
+became known as "The Turing Test". This test is very simple: a person and a
+machine are given questions or tasks, and the machine will be rated based on how
+close its answers and approaches are to the answers and approaches of the
+person.
+
+                        </p>
+                        <p>
+
+From the Turing test, we derived the three types of AI. First, we have
+Artificial Narrow Intelligence, the one thath is practically everywhere, from
+the games you play to the social media sites you browse. Then, we have
+Artificial General Intelligence, which are AIs that can pass the turing test.
+Finally, we have Artificial Superintelligence, an AI that is far smarter and
+more capable than man.
+
+                        </p>
+                    </div>
+                    <div class="col-sm-6">
+                        <img src="../images/intro/image3.jpg">
+                    </div>
+                </div>
+
+                <hr class="transition">
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <img 
+                            src="../images/intro/image4.png"
+                            style="margin-bottom: 10px;"
+                        />
+                    </div>
+                    <div class="col-sm-6">
+                        <h3>The Advantages</h3>
+                        <p>
+
+Utilizing Artificial Intelligence has several advantages, such as:
+<ol>
+    <li>
+        AI can learn by simply looking at statistics and information, unlike
+        humans, who need an explaination of a concept in order to learn
+    </li>
+    <li>
+        AI can teach itself much faster than humans ever can
+    </li>
+    <li>
+        AI can respond in any time of the day, as long as it is connected to a
+        power source. Meanwhile, humans need some time to rest
+    </li>
+    <li>
+        AI is less prone to making mistakes compared to humans
+    </li>
+    <li>
+        AI can efficiently organize data and get the most out of this data
+    </li>
+</ol>
+
+                        </p>
+                    </div>
+                </div>
+
+                <hr class="transition" style="margin-top: 30px;">
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h3>The Uses</h3>
+                        <p>
+
+AI also has a lot of uses in the following fields and more:
+<ul>
+    <li>Data Science</li>
+    <ul>
+        <li>
+            AI can be used to arrange, process, and present data efficiently.
+            This will save data scientists a lot of time on their work.
+        </li>
+    </ul>
+    <li>Natural Language Processing</li>
+    <ul>
+        <li>
+            This is actually the mechanism behind predictive text, a commonly
+            used feature built into most mobile phones. AI can be used to
+            predict the next word a user will type.
+        </li>
+    </ul>
+    <li>Game Development</li>
+    <ul>
+        <li>
+            AI can be used to simulate the behavior of non-player characters
+            (NPCs). These NPCs make the game more exciting even if you are
+            playing alone.
+        </li>
+    </ul>
+    <li>Computer Vision</li>
+    <ul>
+        <li>
+            This is the technology that enables self-driving cars. AI can be
+            used to accurately let a computer identify objects in an image.
+        </li>
+    </ul>
+</ul>
+
+                        </p>
+                    </div>
+                    <div class="col-sm-6">
+                        <img src="../images/intro/image5.jpg">
+                    </div>
+                </div>
+
+                <hr class="transition">
+
+                <div
+                    class="row"
+                    style="
+                        padding-top: 30px;
+                        padding-bottom: 30px;
+                        background-color: #094978;
+                        border-radius: 20px 20px 0px 0px;
+                ">
+                    <div class="col-sm-6">
+                        <h3>In summary,</h3>
+<ul>
+    <li>
+        Artificial Intelligence is a machine that can think like man to some
+        degree
+    </li>
+    <li>
+        This means an AI must be able to perceive, reason, solve, learn, and
+        commuunicate
+    </li>
+    <li>
+        We can think of an AI as an agent functioning in an environment
+    </li>
+    <li>
+        That environment can be altered to make the AI more efficient
+    </li>
+    <li>
+        The turing test tells us how human-like a machine thinks
+    </li>
+    <li>
+        From the concept of the Turing test, we can derive 3 types of AI: one
+        that scores decently (ANI), one that aces the test (AGI), and one that
+        gets over perfect (ASI)
+    </li>
+    <li>
+        The video to the left summarizes all these points very well, and it
+        also adds some more relevant information to my discussion. In case
+        the video does not play, here is the link:
+        <a href="https://youtu.be/kWmX3pd1f10">
+            https://youtu.be/kWmX3pd1f10
+        </a>
+    </li>
+</ul>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <!-- <a href="https://www.sciencealert.com/artificial-intelligence">
+                            <img src="../images/intro/image6.jpg">
+                        </a> -->
+
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/kWmX3pd1f10?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div
+                    class="row"
+                    style="
+                        padding-bottom: 30px;
+                        background-color: #094978;
+                        border-radius: 0px 0px 20px 20px;
+                ">
+                    <div class="col-sm-12">
+                        <h3>Sources</h3>
+<ul>
+    <li>
+        Smith, et al. (2006).
+        <a href="https://courses.cs.washington.edu/courses/csep590/06au/projects/history-ai.pdf">
+            <i>The history of Artificial Intelligence.</i>
+        </a>
+        [PDF]. University of Washington.
+    </li>
+
+    <li>
+        Tutorialspoint (n.d.).
+        <a href="https://www.tutorialspoint.com/artificial_intelligence_with_python/index.htm">
+            <i>AI with Python tutorial.</i>
+        </a>
+    </li>
+
+    <li>
+        Holovatyi, D. (2020).
+        <a href="https://www.linkedin.com/pulse/3-types-artificial-intelligence-denys-holovatyi">
+            <i>3 types of Artificial Intelligence.</i>
+        </a>
+        LinkedIn.
+    </li>
+</ul>
+                    </div>
+                </div>
+            </div>
+
+            <footer>
+                <h3>Contact me!</h3>
+                <p>Email:
+                    <a href="mailto:esasperin@gmail.com">
+                        esasperin@gmail.com
+                    </a>
+                </p>
+                <p>Facebook:
+                    <a href="https://www.facebook.com/MedsPogi/">
+                        Elaiah S. Asperin
+                    </a>
+                </p>
+                <p>Twitter:
+                    <a href="https://twitter.com/MedsPogi">@MedsPogi</a>
+                </p>
+                <p>Discord: Meds Pogi#6105</p>
+                <a href="home.html"><img src="../images/logo.png"></a>
+            </footer>
+        </div>
+    </body>
+</html>

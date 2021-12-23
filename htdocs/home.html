@@ -15,74 +15,44 @@
 
         <link rel="icon" href="../images/icon.png">
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
-        >
-
+        <!-- stylesheets from the web -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        
+        <!-- personal stylesheets -->
         <link rel="stylesheet" href="../css/index.css">
+        <link rel="stylesheet" href="../css/pages/intro.css">
+
+        <!-- javascript to make the navbar scalable -->
+        <script src="../js/index.js"></script>
 
         <title>AI: The Inner Workings</title>
     </head>
 
     <body>
-        <nav class="navbar">
-            <ul class="navbar-nav">
-                <li class="logo">
-                    <a href="#" class="nav-link">
-                        <img src="../images/navbar/1-expand.svg" width="60px" height="60px">
-                        <span class="link-text logo-text">AI: The Inner Workings</span>
-                    </a>
-                </li>
-                
-                <li class="nav-item">
-                    <a href="#" class="nav-link">                       
-                        <img src="../images/navbar/2-home.svg" width="60px" height="60px">
-                        <span class="link-text">Home</span>
-                    </a>
-                </li>
-                
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <img src="../images/navbar/3-intro.svg" width="60px" height="60px">
-                        <span class="link-text">Intro</span>
-                    </a>
-                </li>
+        <!-- Navigation Bar frozen at the top of the site -->
+        <header>
+            <a href="#top" class="active">
+                <img src="../images/logo.png">
+            </a>
 
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <img src="../images/navbar/4-myths.svg" width="60px" height="60px">
-                        <span class="link-text">Myths</span>
-                    </a>
-                </li>
+            <h3>AI: The Inner Workings</h3>
 
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <img src="../images/navbar/5-development.svg" width="60px" height="60px">
-                        <span class="link-text">Development</span>
-                    </a>
-                </li>
+            <nav>
+                <a href="uses.html">Uses</a>
+                <a href="development.html">Development</a>
+                <a href="myths.html">Myths</a>
+                <a href="intro.html">Intro</a>
+                <a href="#top">Home</a>
+            </nav>
 
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <img src="../images/navbar/6-uses.svg" width="60px" height="60px">
-                        <span class="link-text">Uses</span>
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <img src="../images/navbar/7-sources.svg" width="60px" height="60px">
-                        <span class="link-text">Sources</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-
+            <a href="javascript:void(0);" onclick="dropdown()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </header>
+        
         <!-- Main contents of the site, from title to footer -->
-        <main>
+        <section>
             <header>
                 <h1>AI: The Inner Workings</h1>
                 <h2>How artificial intelligence really works</h2>
@@ -93,7 +63,8 @@
 
             <hr class="transition">
 
-            <!-- <div class="container">
+            <!-- Bootstrap grid containing all the main text of the site -->
+            <div class="container">
                 <div class="row">
                     <div class="col-sm-6">
                         <h3>The Purpose</h3>
@@ -204,7 +175,7 @@ over it. There might be a hidden tooltip.
                         </a>
                     </div>
                 </div>
-            </div> -->
+            </div>
 
             <footer>
                 <h3>Contact me!</h3>
@@ -224,6 +195,6 @@ over it. There might be a hidden tooltip.
                 <p>Discord: Meds Pogi#6105</p>
                 <a href="#top"><img src="../images/logo.png"></a>
             </footer>
-        </main>
+        </section>
     </body>
 </html>

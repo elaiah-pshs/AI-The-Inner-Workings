@@ -1,0 +1,25 @@
+/*
+Author: Elaiah S. Asperin
+Created: 17 December 2021
+Last Modified: 18 December 2021
+Description: Intro page stylsheet for "AI: The Inner Workings"
+*/
+
+
+/* ========================================================================= */
+
+
+/* General Styles */
+
+div.container h3 {
+    margin-top: 0px;
+}
+
+div.container p {
+    text-align: justify;
+}
+
+div.container img {
+    width: calc(100% - 5px);
+    border-radius: 20px;
+}
