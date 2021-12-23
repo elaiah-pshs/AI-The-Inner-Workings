@@ -4,7 +4,6 @@
 
 * [Website Description](#description)
 * [Code Explaination](#explaination)
-* [Bugs (both fixed and unfixed)](#bugs)
 * [Code Accreditation](#code-credits)
 
 <br>
@@ -188,25 +187,6 @@ There are CSS properties out there that allow you to set the minimum and maximum
 }
 ```
 The CSS `:last-child` Pseudo-class points to the last child of an element. In the example above (from `./css/navbar.css3`), the pseudo-class is used to put the last element of the navigation bar, the link to the sources site, at the very bottom of the viewport.
-
-<br>
-<br>
-
-<h2 id="bugs"> Bugs </h2>
-Listed bellow are all the bugs (including fixed ones) found in this website
-
-<br>
-
-### Bug #001
-
-Description:
-* When the viewport width is exactly `640px`, the navigation bar beomces vertical, but the elements inside it remain in horizontal arrangement.
-
-Status:
-* Fixed
-
-Fix:
-* Increased the `min-wdth` property of the media query for larger screens (in `./css/navbar.css`) to `641px`.
 
 <br>
 <br>
