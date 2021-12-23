@@ -140,8 +140,9 @@ Description: Navigation bar stylesheet for "AI: The Inner Workings"
     }
 }
   
-/* For large screens (min-width is set to 641px instead of 640px to avoid
-bug #001) */
+/* For large screens (min-width is set to 641px instead of 640px to avoid a bug
+where the items in the navbar are arranged horizontally even though they are
+supposed to be arranged vertically) */
 @media only screen and (min-width: 641px) {
     /* Positions the navbar at the left side of the site */
     .navbar {
