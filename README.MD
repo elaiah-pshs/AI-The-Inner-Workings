@@ -236,7 +236,7 @@ The CSS `+` selector points to the element right after a certain element. In the
     * [A Responsive Animated CSS Icon Navbar](https://github.com/fireship-io/222-responsive-icon-nav-css)
 
 * The code for hiding scrollbars while still maintaining the website's ability to scroll was taken from this Stackoverflow question posted Oussama el Bachiri
-    *[Hide scroll bar, but while still being able to scroll](https://stackoverflow.com/questions/16670931/hide-scroll-bar-but-while-still-being-able-to-scroll?page=1&tab=votes#answer-38994837)
+    * [Hide scroll bar, but while still being able to scroll](https://stackoverflow.com/questions/16670931/hide-scroll-bar-but-while-still-being-able-to-scroll?page=1&tab=votes#answer-38994837)
 
 * The code for the card system right after each title is also inspired by the work of Jeff Dalaney on this Github repository:
-    *[Stacked Card List](https://github.com/fireship-io/stacked-card-list)
+    * [Stacked Card List](https://github.com/fireship-io/stacked-card-list)
