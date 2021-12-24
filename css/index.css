@@ -104,7 +104,7 @@ body::-webkit-scrollbar-thumb {
         -ms-overflow-style: none;   /* Internet Explorer 10+ */
         scrollbar-width: none;      /* Firefox */
     }
-    
+
     body::-webkit-scrollbar { 
         display: none;              /* Safari and Chrome */
     }
@@ -116,7 +116,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* For extremely small screens */
-@media screen and (max-width: 480px) {
+@media only screen and (max-width: 480px) {
     /* Transfers the margin of main from the left to the bottom */
     main {
         margin: 0px 0px 3rem 0px;
@@ -124,5 +124,23 @@ body::-webkit-scrollbar-thumb {
 
     p {
         font-size: 0.75rem;
+    }
+}
+
+/* For short screens */
+@media only screen and (max-height: 576px) {
+    /* Removes the scrollbar */
+    body {
+        -ms-overflow-style: none;   /* Internet Explorer 10+ */
+        scrollbar-width: none;      /* Firefox */
+    }
+
+    body::-webkit-scrollbar { 
+        display: none;              /* Safari and Chrome */
+    }
+
+    /* Transfers the margin of main from the left to the bottom */
+    main {
+        margin: 0px 0px 3rem 0px;
     }
 }

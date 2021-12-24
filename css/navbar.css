@@ -133,7 +133,7 @@ Description: Navigation bar stylesheet for "AI: The Inner Workings"
 /* For large screens (min-width is set to 641px instead of 640px to avoid a bug
 where the items in the navbar are arranged horizontally even though they are
 supposed to be arranged vertically) */
-@media only screen and (min-width: 641px) {
+@media only screen and (min-width: 641px) and (min-height: 577px) {
     /* Positions the navbar at the left side of the site */
     .navbar {
         width: 5rem;
@@ -164,7 +164,7 @@ supposed to be arranged vertically) */
 }
 
 /* For small screens */
-@media screen and (max-width: 640px) {
+@media only screen and (max-width: 640px) {
     /* Positions the navbar at the bottom of the site */
     .navbar {
         width: 100vw;
@@ -194,7 +194,7 @@ supposed to be arranged vertically) */
 }
 
 /* For extremely small screens */
-@media screen and (max-width: 480px) {
+@media only screen and (max-width: 480px) {
     /* Positions the navbar at the bottom of the site */
     .navbar {
         width: 100vw;
@@ -202,7 +202,7 @@ supposed to be arranged vertically) */
         bottom: 0;
     }
 
-    /* Shrinks each item on the navigation bar */
+    /* Shrinks each item on the navigation bar and aligns them to the center */
     .nav-item {
         height: 3rem;
         align-items: center;
@@ -211,6 +211,50 @@ supposed to be arranged vertically) */
     /* Shrinks each link on the navigation bar */
     .nav-link {
         height: 3rem;
+    }
+
+    /* Shrinks each icon on the navigation bar */
+    .nav-link img {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin: 0 0.75rem;
+    }
+}
+
+/* For short screens */
+@media only screen and (max-height: 576px) {
+    /* Positions the navbar at the bottom of the site */
+    .navbar {
+        width: 100vw;
+        height: 3rem;
+        bottom: 0;
+    }
+
+    /* Removes the arrows at the top of the navbar */
+    .logo {
+        display: none;
+    }
+
+    /* Arranges the elements in the navbar as a row */
+    .navbar-nav {
+        flex-direction: row;
+    }
+
+    /* Shrinks each item on the navigation bar and aligns them to the center */
+    .nav-item {
+        height: 3rem;
+        align-items: center;
+    }
+
+    /* Removes the top margin of the last link */
+    .nav-item:last-child {
+        margin-top: 0px;
+    }
+
+    /* Shrinks each link on the navigation bar and center-aligns them */
+    .nav-link {
+        height: 3rem;
+        justify-content: center;
     }
 
     /* Shrinks each icon on the navigation bar */
