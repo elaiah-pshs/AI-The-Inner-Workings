@@ -12,6 +12,8 @@
 
 4. A mythbusters-type minigame related to some common myths about AI
 
+Feel free to point out any issues with the website in the `issues` section! I'm not so strict on Github conventions (because for the most part I don't even follow them HAHAHAHA), so don't be shy.
+
 <br>
 <br>
 
