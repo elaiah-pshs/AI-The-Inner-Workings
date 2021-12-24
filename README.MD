@@ -1,14 +1,5 @@
 # AI: The Inner Workings
 
-## Table Of Contents
-
-* [Website Description](#description)
-* [Code Explaination](#explaination)
-* [Code Accreditation](#code-credits)
-
-<br>
-<br>
-
 <h2 id="description"> Description </h2>
 
 **AI: The Inner Workings** is a website about Artificial Intelligence, its uses, how it is made, and the myths surrounding it. This website contains everything from:
