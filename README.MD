@@ -1,5 +1,14 @@
 # AI: The Inner Workings
 
+## Table Of Contents
+
+* [Website Description](#description)
+* [Code Explaination](#explaination)
+* [Code Accreditation](#code-credits)
+
+<br>
+<br>
+
 <h2 id="description"> Description </h2>
 
 **AI: The Inner Workings** is a website about Artificial Intelligence, its uses, how it is made, and the myths surrounding it. This website contains everything from:
@@ -17,7 +26,7 @@
 
 <h2 id="explaination"> Code Explaination </h2>
 
-This section contains all the explainations for each line of code I used in this whole project that has not been and will not be discussed in Computer Science 3.
+This section contains all the explainations for each line of code I used in this whole project that you might not be familiar with.
 
 <br>
 
@@ -68,7 +77,7 @@ margin-right: 5rem;
 width: 100vw;
 height: 50vh;
 ```
-CSS relative units are units whose values are not fixed, and are instead relative to a certain value in the document. The relative units I used in this site are listed above.
+CSS relative units are units whose values are not fixed, and are instead relative to a certain value in the document. Some of he relative units I used in this site are listed above.
 
 * The `%` unit is a unit relative to the parent value of the property it is declared in. For example, if the `margin-left` of the parent element is 100px, then the element which has the styles above will have a `margin-left` of 5px.
 
@@ -159,7 +168,22 @@ In the example above, the styles in the media query will only be applied when th
 
 <br>
 
-### 11. CSS Minimum and Maximum Properties
+### 11. CSS Scrollbar Hiding
+```css
+body {
+    -ms-overflow-style: none;   /* Internet Explorer 10+ */
+    scrollbar-width: none;      /* Firefox */
+}
+
+body::-webkit-scrollbar { 
+    display: none;              /* Safari and Chrome */
+}
+```
+There are several ways to hide scrollbars in CSS, but, depending on the browser, some of them may not work. The example above simply demonstrates how you can combine these scrollbar hiding properties to ensure that the scrollbar will not appear no matter the browser you are using.
+
+<br>
+
+### 12. CSS Minimum and Maximum Properties
 ```css
 .nav-link img {
     width: 2rem;
@@ -171,14 +195,45 @@ There are CSS properties out there that allow you to set the minimum and maximum
 
 <br>
 
-### 12. CSS `:last-child` Pseudo-class
+### 13. CSS `:last-child` Pseudo-class
 ```css
 .nav-item:last-child {
     margin-top: auto;
 }
 ```
-The CSS `:last-child` Pseudo-class points to the last child of an element. In the example above (from `./css/navbar.css3`), the pseudo-class is used to put the last element of the navigation bar, the link to the sources site, at the very bottom of the viewport.
+The CSS `:last-child` pseudo-class points to the last child of an element. In the example above (from `./css/navbar.css3`), the pseudo-class is used to put the last element of the navigation bar, the link to the sources site, at the very bottom of the viewport.
 
+<br>
+
+### 14. CSS `text-transform` Property
+```css
+.logo {
+    text-transform: uppercase;
+}
+```
+The CSS `text-transform` property simply states the casing of the text it styles, whcih can be uppercase (all letters are capital), lowercase (all letters are small), capitalize (only first letters are capital), or none (default).
+
+<br>
+
+### 15. CSS `letter-spacing` Property
+```css
+.logo {
+    /* Puts a space in between each character that is 0.3 times the width of the
+    character "0" */
+    letter-spacing: 0.3ch;
+}
+```
+The CSS `letter spacing` property modifies the space between each character in the text it is styling. In the example above, there will be a space of `0.3ch`, or 0.3 times the width of a "0" character, between each character.
+ 
+<br>
+
+### 16. CSS `+` Selector
+```css
+.navbar:hover + div {
+    width: 100vw;
+}
+```
+The CSS `+` selector points to the element right after a certain element. In the example above, the rule is targeting a div right after an element with a class of `.navbar` that is being hovered on.
 <br>
 <br>
 
