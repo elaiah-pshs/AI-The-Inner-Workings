@@ -1,7 +1,7 @@
 /*
 Author: Elaiah S. Asperin
 Created: 21 December 2021
-Last Modified: 21 December 2021
+Last Modified: 24 December 2021
 Description: Navigation bar stylesheet for "AI: The Inner Workings"
 */
 
@@ -13,12 +13,26 @@ Description: Navigation bar stylesheet for "AI: The Inner Workings"
 
 .navbar {
     overflow: hidden;
-    transition: width 600ms ease;
+    transition: width 600ms;
     
     background-color: var(--bg-primary);
 
     position: fixed;
+    z-index: 2;
+}
+
+.shader {
+    background-color: rgba(0, 0, 0, 0.5);
+
+    /* Iinitially set to 0 to create the "expanding dark area" effect when the
+    transition is applied after a change in width */
+    width: 0px;
+    height: 100vh;
+
+    position: fixed;
     z-index: 1;
+
+    transition: var(--transition-speed);
 }
   
 .navbar-nav {
@@ -39,6 +53,7 @@ Description: Navigation bar stylesheet for "AI: The Inner Workings"
 }
 
 .nav-item:last-child {
+    /* Forces the last navigation bar element to the bottom */
     margin-top: auto;
 }
   
@@ -90,7 +105,7 @@ Description: Navigation bar stylesheet for "AI: The Inner Workings"
     transform: rotate(0deg);
     transition: var(--transition-speed);
 }
-  
+
 .logo-text {
     display: inline;
 
@@ -115,8 +130,41 @@ Description: Navigation bar stylesheet for "AI: The Inner Workings"
 
 /* Media Queries */
 
+/* For large screens (min-width is set to 641px instead of 640px to avoid a bug
+where the items in the navbar are arranged horizontally even though they are
+supposed to be arranged vertically) */
+@media only screen and (min-width: 641px) {
+    /* Positions the navbar at the left side of the site */
+    .navbar {
+        width: 5rem;
+        height: 100%;
+        top: 0;
+    }
+
+    /* Darkens the area the navigation bar does not cover */
+    .navbar:hover + div {
+        width: 100vw;
+    }
+
+    /* Expands the navbar when the user hovers over it */
+    .navbar:hover {
+        width: 20rem;
+    }
+
+    /* Makes the link text visible when the user hovers over the navbar */
+    .navbar:hover .link-text {
+        display: inline;
+    }
+
+    /* Makes the title of the site appear after the arrows at the top of the
+    navbar */
+    .navbar:hover .logo-text {
+        left: 80px;
+    }
+}
+
 /* For small screens */
-@media only screen and (max-width: 640px) {
+@media screen and (max-width: 640px) {
     /* Positions the navbar at the bottom of the site */
     .navbar {
         width: 100vw;
@@ -134,36 +182,41 @@ Description: Navigation bar stylesheet for "AI: The Inner Workings"
         flex-direction: row;
     }
 
+    /* Removes the top margin of the last link */
+    .nav-item:last-child {
+        margin-top: 0px;
+    }
+
     /* Aligns the navbar links to the center of their containers */
     .nav-link {
         justify-content: center;
     }
 }
-  
-/* For large screens (min-width is set to 641px instead of 640px to avoid a bug
-where the items in the navbar are arranged horizontally even though they are
-supposed to be arranged vertically) */
-@media only screen and (min-width: 641px) {
-    /* Positions the navbar at the left side of the site */
+
+/* For extremely small screens */
+@media screen and (max-width: 480px) {
+    /* Positions the navbar at the bottom of the site */
     .navbar {
-        width: 5rem;
-        height: 100%;
-        top: 0;
+        width: 100vw;
+        height: 3rem;
+        bottom: 0;
     }
 
-    /* Expands the navbar when the user hovers over it */
-    .navbar:hover {
-        width: 20rem;
+    /* Shrinks each item on the navigation bar */
+    .nav-item {
+        height: 3rem;
+        align-items: center;
     }
 
-    /* Makes the link text visible when the user hovers over the navbar */
-    .navbar:hover .link-text {
-        display: inline;
+    /* Shrinks each link on the navigation bar */
+    .nav-link {
+        height: 3rem;
     }
 
-    /* Makes the title of the site appear after the arrows at the top of the
-    navbar */
-    .navbar:hover .logo-text {
-        left: 80px;
+    /* Shrinks each icon on the navigation bar */
+    .nav-link img {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin: 0 0.75rem;
     }
 }
