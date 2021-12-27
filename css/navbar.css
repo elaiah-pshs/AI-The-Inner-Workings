@@ -1,7 +1,7 @@
 /*
 Author: Elaiah S. Asperin
 Created: 21 December 2021
-Last Modified: 24 December 2021
+Last Modified: 27 December 2021
 Description: Navigation bar stylesheet for "AI: The Inner Workings"
 */
 
@@ -24,7 +24,7 @@ Description: Navigation bar stylesheet for "AI: The Inner Workings"
 .shader {
     background-color: rgba(0, 0, 0, 0.5);
 
-    /* Iinitially set to 0 to create the "expanding dark area" effect when the
+    /* Initially set to 0 to create the "expanding dark area" effect when the
     transition is applied after a change in width */
     width: 0px;
     height: 100vh;
@@ -35,7 +35,7 @@ Description: Navigation bar stylesheet for "AI: The Inner Workings"
     transition: var(--transition-speed);
 }
   
-.navbar-nav {
+.navbar > ul {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -48,16 +48,16 @@ Description: Navigation bar stylesheet for "AI: The Inner Workings"
     margin: 0;
 }
   
-.nav-item {
+.navbar-item {
     width: 100%;
 }
 
-.nav-item:last-child {
+.navbar-item:last-child {
     /* Forces the last navigation bar element to the bottom */
     margin-top: auto;
 }
   
-.nav-link {
+.navbar-link {
     display: flex;
     align-items: center;
 
@@ -69,17 +69,17 @@ Description: Navigation bar stylesheet for "AI: The Inner Workings"
     transition: var(--transition-speed);
 }
   
-.nav-link:hover {
+.navbar-link:hover {
     background: var(--bg-secondary);
     color: var(--text-secondary);
 }
   
-.link-text {
+.navbar-link-text {
     display: none;
     margin-left: 1rem;
 }
 
-.nav-link img {
+.navbar-link img {
     width: 2.5rem;
     height: 2.5rem;
 
@@ -106,7 +106,7 @@ Description: Navigation bar stylesheet for "AI: The Inner Workings"
     transition: var(--transition-speed);
 }
 
-.logo-text {
+.navbar-logo-text {
     display: inline;
 
     color: var(--text-secondary);
@@ -150,13 +150,13 @@ Description: Navigation bar stylesheet for "AI: The Inner Workings"
     }
 
     /* Makes the link text visible when the user hovers over the navbar */
-    .navbar:hover .link-text {
+    .navbar:hover .navbar-link-text {
         display: inline;
     }
 
     /* Makes the title of the site appear after the arrows at the top of the
     navbar */
-    .navbar:hover .logo-text {
+    .navbar:hover .navbar-logo-text {
         left: 80px;
     }
 }
@@ -176,17 +176,17 @@ Description: Navigation bar stylesheet for "AI: The Inner Workings"
     }
 
     /* Arranges the elements in the navbar as a row */
-    .navbar-nav {
+    .navbar > ul {
         flex-direction: row;
     }
 
     /* Removes the top margin of the last link */
-    .nav-item:last-child {
+    .navbar-item:last-child {
         margin-top: 0px;
     }
 
     /* Aligns the navbar links to the center of their containers */
-    .nav-link {
+    .navbar-link {
         justify-content: center;
     }
 }
@@ -201,18 +201,18 @@ Description: Navigation bar stylesheet for "AI: The Inner Workings"
     }
 
     /* Shrinks each item on the navigation bar and aligns them to the center */
-    .nav-item {
+    .navbar-item {
         height: 3rem;
         align-items: center;
     }
 
     /* Shrinks each link on the navigation bar */
-    .nav-link {
+    .navbar-link {
         height: 3rem;
     }
 
     /* Shrinks each icon on the navigation bar */
-    .nav-link img {
+    .navbar-link img {
         width: 1.5rem;
         height: 1.5rem;
         margin: 0 0.75rem;
@@ -234,29 +234,29 @@ Description: Navigation bar stylesheet for "AI: The Inner Workings"
     }
 
     /* Arranges the elements in the navbar as a row */
-    .navbar-nav {
+    .navbar > ul {
         flex-direction: row;
     }
 
     /* Shrinks each item on the navigation bar and aligns them to the center */
-    .nav-item {
+    .navbar-item {
         height: 3rem;
         align-items: center;
     }
 
     /* Removes the top margin of the last link */
-    .nav-item:last-child {
+    .navbar-item:last-child {
         margin-top: 0px;
     }
 
     /* Shrinks each link on the navigation bar and center-aligns them */
-    .nav-link {
+    .navbar-link {
         height: 3rem;
         justify-content: center;
     }
 
     /* Shrinks each icon on the navigation bar */
-    .nav-link img {
+    .navbar-link img {
         width: 1.5rem;
         height: 1.5rem;
         margin: 0 0.75rem;

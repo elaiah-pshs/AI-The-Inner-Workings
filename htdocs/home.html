@@ -17,10 +17,7 @@
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
-        >
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
 
         <link rel="stylesheet" href="../css/index.css">
 
@@ -29,53 +26,53 @@
 
     <body>
         <nav class="navbar">
-            <ul class="navbar-nav">
+            <ul>
                 <li class="logo">
-                    <a href="#" class="nav-link">
+                    <a href="#" class="navbar-link">
                         <img src="../images/navbar/1-expand.svg" width="60px" height="60px">
-                        <span class="link-text logo-text">AI: The Inner Workings</span>
+                        <span class="navbar-link-text navbar-logo-text">AI: The Inner Workings</span>
                     </a>
                 </li>
                 
-                <li class="nav-item">
-                    <a href="#" class="nav-link">                       
+                <li class="navbar-item">
+                    <a href="#" class="navbar-link">                       
                         <img src="../images/navbar/2-home.svg" width="60px" height="60px">
-                        <span class="link-text">Home</span>
+                        <span class="navbar-link-text">Home</span>
                     </a>
                 </li>
                 
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
+                <li class="navbar-item">
+                    <a href="#" class="navbar-link">
                         <img src="../images/navbar/3-intro.svg" width="60px" height="60px">
-                        <span class="link-text">Intro</span>
+                        <span class="navbar-link-text">Intro</span>
                     </a>
                 </li>
 
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
+                <li class="navbar-item">
+                    <a href="#" class="navbar-link">
                         <img src="../images/navbar/4-myths.svg" width="60px" height="60px">
-                        <span class="link-text">Myths</span>
+                        <span class="navbar-link-text">Myths</span>
                     </a>
                 </li>
 
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
+                <li class="navbar-item">
+                    <a href="#" class="navbar-link">
                         <img src="../images/navbar/5-development.svg" width="60px" height="60px">
-                        <span class="link-text">Development</span>
+                        <span class="navbar-link-text">Development</span>
                     </a>
                 </li>
 
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
+                <li class="navbar-item">
+                    <a href="#" class="navbar-link">
                         <img src="../images/navbar/6-uses.svg" width="60px" height="60px">
-                        <span class="link-text">Uses</span>
+                        <span class="navbar-link-text">Uses</span>
                     </a>
                 </li>
 
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
+                <li class="navbar-item">
+                    <a href="#" class="navbar-link">
                         <img src="../images/navbar/7-sources.svg" width="60px" height="60px">
-                        <span class="link-text">Sources</span>
+                        <span class="navbar-link-text">Sources</span>
                     </a>
                 </li>
             </ul>
@@ -87,7 +84,7 @@
 
         <!-- Main contents of the site, from title to footer -->
         <main>
-            <header>
+            <header class="page-header">
                 <h1>AI: The Inner Workings</h1>
                 <h2>How artificial intelligence really works</h2>
                 <a href="https://www.ai-cube.eu/events/17th-international-conference-on-artificial-intelligence-applications-and-innovations/">
@@ -97,69 +94,76 @@
 
             <hr class="transition">
 
-            <nav class="card-list">
-                <article class="card">
-                    <header class="card-header">
-                        <img class="avatar" src="../images/home/icon1.svg">
-                        <svg class="half-circle" viewBox="0 0 106 57">
-                            <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
-                        </svg>
+            <section class="cards">
+                <header class="card-header card card-list-header">
+                    <img class="avatar" src="../images/navbar/2-home.svg">
+                    <svg class="half-circle" viewBox="0 0 106 57">
+                        <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
+                    </svg>
 
-                        <a class="header-text">
-                            <p>Section 1:</p>
-                            <h2>The Purpose</h2>
-                        </a>
-                    </header>
+                    <a class="header-text">
+                        <p>AI: THE INNER WORKINGS</p>
+                        <h2>Home</h2>
+                    </a>
+                </header>
 
-                    <a href="https://edgy.app/examples-of-artificial-intelligence">
+                <nav class="card-list">
+                    <a class="card" href="#section-1">
+                        <header class="card-header">
+                            <img class="avatar" src="../images/home/icon1.svg">
+                            <svg class="half-circle" viewBox="0 0 106 57">
+                                <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
+                            </svg>
+
+                            <div class="header-text">
+                                <p>Section 1:</p>
+                                <h2>The Purpose</h2>
+                            </div>
+                        </header>
+
                         <img class="visual" src="../images/home/image1.jpg">
                     </a>
-                </article>
 
-                <article class="card">
-                    <header class="card-header">
-                        <img class="avatar" src="../images/home/icon2.svg">
-                        <svg class="half-circle" viewBox="0 0 106 57">
-                            <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
-                        </svg>
+                    <a class="card" href="#section-2">
+                        <header class="card-header">
+                            <img class="avatar" src="../images/home/icon2.svg">
+                            <svg class="half-circle" viewBox="0 0 106 57">
+                                <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
+                            </svg>
 
-                        <a class="header-text">
-                            <p>Section 2:</p>
-                            <h2>The Goal</h2>
-                        </a>
-                    </header>
+                            <div class="header-text">
+                                <p>Section 2:</p>
+                                <h2>The Goal</h2>
+                            </div>
+                        </header>
 
-                    <a href="https://www.softwareone.com/en-fi/blog/articles/2021/04/05/implementing-artificial-intelligence-part-1">
                         <img class="visual" src="../images/home/image2.jpg">
                     </a>
-                </article>
 
-                <article class="card">
-                    <header class="card-header">
-                        <img class="avatar" src="../images/home/icon3.svg">
-                        <svg class="half-circle" viewBox="0 0 106 57">
-                            <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
-                        </svg>
+                    <a class="card" href="#section-3">
+                        <header class="card-header">
+                            <img class="avatar" src="../images/home/icon3.svg">
+                            <svg class="half-circle" viewBox="0 0 106 57">
+                                <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
+                            </svg>
 
-                        <a class="header-text">
-                            <p>Section 3:</p>
-                            <h2>The Strategy</h2>
-                        </a>
-                    </header>
+                            <div class="header-text">
+                                <p>Section 3:</p>
+                                <h2>The Strategy</h2>
+                            </div>
+                        </header>
 
-                    <a href="https://medium.com/mit-initiative-on-the-digital-economy/how-smart-is-artificial-intelligence-35a384b40a05">
                         <img class="visual" src="../images/home/image3.jpg">
                     </a>
-                </article>
-            </nav>
+                </nav>
+            </section>
 
             <hr class="transition">
 
-            <!-- <div class="container">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <h3>The Purpose</h3>
-                        <p>
+            <section class="content" id="section-1">
+                <article>
+                    <h3>The Purpose</h3>
+                    <p>
 
 Artificial Intelligence is one of the most promising emerging technologies in
 computer science and programming. The term "Artificial Intelligence" was coined
@@ -172,101 +176,94 @@ popularity and wide usage, many people do not truly understand what Artificial
 Intelligence is, how it works, and why we decided to create it in the first
 place. That is why this website was made.
 
-                        </p>
+                    </p>
 <p style="margin: 20px 0px 0px 0px;">Source:</p>
 <p>
-    Smith, et al. (2006).
-    <a href="https://courses.cs.washington.edu/courses/csep590/06au/projects/history-ai.pdf">
-        <i>The history of Artificial Intelligence.</i>
-    </a>
-    [PDF]. University of Washington.
+Smith, et al. (2006).
+<a href="https://courses.cs.washington.edu/courses/csep590/06au/projects/history-ai.pdf">
+    <i>The history of Artificial Intelligence.</i>
+</a>
+[PDF]. University of Washington.
 </p>
-                    </div>
-                    <div class="col-sm-6">
-                        <a href="https://edgy.app/examples-of-artificial-intelligence">
-                            <img src="../images/home/image1.jpg">
-                        </a>
-                    </div>
-                </div>
+                </article>
+                <a href="https://edgy.app/examples-of-artificial-intelligence">
+                    <img src="../images/home/image1.jpg">
+                </a>
+            </section>
 
-                <hr class="transition">
+            <hr class="transition">
 
-                <div class="row">
-                    <div class="col-sm-6">
-                        <a href="https://www.softwareone.com/en-fi/blog/articles/2021/04/05/implementing-artificial-intelligence-part-1">
-                            <img 
-                                src="../images/home/image2.jpg"
-                                style="margin-bottom: 10px;"
-                            />
-                        </a>
-                    </div>
-                    <div class="col-sm-6">
-                        <h3>The Goal</h3>
-                        <p>
+            <section class="content" id="section-2">
+                <a href="https://www.softwareone.com/en-fi/blog/articles/2021/04/05/implementing-artificial-intelligence-part-1">
+                    <img src="../images/home/image2.jpg">
+                </a>
+                <article>
+                    <h3>The Goal</h3>
+                    <p>
 
 This website aims to:
 <ul>
-    <li>
-        Explain what artificial intelligence is to
-        people with little to no knowledge on
-        programming,
-    </li>
-    <li>
-        Explain why AI was created in the first place,
-    </li>
-    <li>
-        Expound on how an AI is created, and
-    </li>
-    <li>
-        Clear up some misconceptions about artificial
-        intelligence
-    </li>
+<li>
+    Explain what artificial intelligence is to
+    people with little to no knowledge on
+    programming,
+</li>
+<li>
+    Explain why AI was created in the first place,
+</li>
+<li>
+    Expound on how an AI is created, and
+</li>
+<li>
+    Clear up some misconceptions about artificial
+    intelligence
+</li>
 </ul>
 
-                        </p>
-                    </div>
-                </div>
+                    </p>
+                </article>
+            </section>
 
-                <hr class="transition" style="margin-top: 30px;">
+            <hr class="transition">
 
-                <div class="row">
-                    <div class="col-sm-6">
-                        <h3>The Strategy</h3>
-                        <p>
+            <section class="content" id="section-3">
+                <article>
+                    <h3>The Strategy</h3>
+                    <p>
 
 First, you will be introduced to concepts related to artificial intelligence,
 such as intelligence, agents, environments, and the turing test. Then, you will
 learn about what AI really is, along with its advantages and uses.
 
-                        </p>
-                        <p>
+                    </p>
+                    <p>
 
 After that, you will be walked through the process of developing a basic AI,
 which involves machine learning algorithms, data preparation, and logic
 programming
 
-                        </p>
-                        <p>
+                    </p>
+                    <p>
 
 Finally, you will be shown all the applications of AI, such as gaming, natural
 language processing, and computer vision. The underlying code for these
 applications will also be presented
 
-                        </p>
-                        <p>
-                            
+                    </p>
+                    <p>
+                        
 Pro tip: If there is something you do not understand, try hovering your mouse
 over it. There might be a hidden tooltip.
 
-                        </p>
-                    </div>
-                    <div class="col-sm-6">
-                        
-                    </div>
-                </div>
-            </div> -->
+                    </p>
+                </article>
 
-            <footer>
+                <a href="https://medium.com/mit-initiative-on-the-digital-economy/how-smart-is-artificial-intelligence-35a384b40a05">
+                    <img src="../images/home/image3.jpg">
+                </a>
+            </section>
+
+            <footer class="page-footer">
                 <div class="contact">
                     <h3>Contact me!</h3>
                     <p>Email:
