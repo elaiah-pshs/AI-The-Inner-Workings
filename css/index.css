@@ -1,7 +1,7 @@
 /*
 Author: Elaiah S. Asperin
 Created: 21 December 2021
-Last Modified: 27 December 2021
+Last Modified: 28 December 2021
 Description: General stylsheet for "AI: The Inner Workings"
 */
 
@@ -9,23 +9,13 @@ Description: General stylsheet for "AI: The Inner Workings"
 /* ========================================================================= */
 
 
-/* Imported Fonts and Styles */
+/* Imported Styles */
 
 @import "navbar.css";
-@import "title.css";
+@import "page-header.css";
 @import "cards.css";
 @import "content.css";
-@import "footer.css";
-
-@font-face {
-    font-family: "Tomorrow People";
-    src: url("TOMOPRG_.ttf");
-}
-
-@font-face {
-    font-family: "Nugo Sans Light";
-    src: url("NugoSansLight-9YzoK.ttf");
-}
+@import "page-footer.css";
 
 
 /* ========================================================================= */
@@ -64,7 +54,7 @@ main {
     padding: 1rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3 {
     font-family: "Roboto Mono", monospace;
 }
 
@@ -101,7 +91,7 @@ body::-webkit-scrollbar {
     width: 0.5rem;
 }
 
-.cards::-webkit-scrollbar {
+#cards::-webkit-scrollbar {
     height: 0.5rem;
 }
 
@@ -146,7 +136,7 @@ body::-webkit-scrollbar {
         margin: 0px 0px 3rem 0px;
     }
 
-    p {
+    *:not(h1, h2, h3) {
         font-size: 0.75rem;
     }
 }

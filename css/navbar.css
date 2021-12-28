@@ -1,7 +1,7 @@
 /*
 Author: Elaiah S. Asperin
 Created: 21 December 2021
-Last Modified: 27 December 2021
+Last Modified: 28 December 2021
 Description: Navigation bar stylesheet for "AI: The Inner Workings"
 */
 
@@ -11,7 +11,7 @@ Description: Navigation bar stylesheet for "AI: The Inner Workings"
 
 /* General Styles */
 
-.navbar {
+#navbar {
     overflow: hidden;
     transition: width 600ms;
     
@@ -20,8 +20,21 @@ Description: Navigation bar stylesheet for "AI: The Inner Workings"
     position: fixed;
     z-index: 2;
 }
+  
+#navbar > ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-.shader {
+    list-style: none;
+
+    height: 100%;
+
+    padding: 0;
+    margin: 0;
+}
+
+#navbar + div {
     background-color: rgba(0, 0, 0, 0.5);
 
     /* Initially set to 0 to create the "expanding dark area" effect when the
@@ -34,79 +47,40 @@ Description: Navigation bar stylesheet for "AI: The Inner Workings"
 
     transition: var(--transition-speed);
 }
-  
-.navbar > ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 
-    list-style: none;
 
-    height: 100%;
+/* ========================================================================= */
 
-    padding: 0;
-    margin: 0;
-}
-  
-.navbar-item {
-    width: 100%;
-}
 
-.navbar-item:last-child {
-    /* Forces the last navigation bar element to the bottom */
-    margin-top: auto;
-}
-  
-.navbar-link {
-    display: flex;
-    align-items: center;
+/* Navigation Bar Icon Styles*/
 
-    color: var(--text-primary);
-    text-decoration: none;
-
-    height: 5rem;
-
-    transition: var(--transition-speed);
-}
-  
-.navbar-link:hover {
-    background: var(--bg-secondary);
-    color: var(--text-secondary);
-}
-  
-.navbar-link-text {
-    display: none;
-    margin-left: 1rem;
-}
-
-.navbar-link img {
-    width: 2.5rem;
-    height: 2.5rem;
-
-    margin: 0 1.25rem;
-
-    border-radius: 50%;
-}
-  
-.logo {
+#navbar-icon {
     text-align: left;
     text-transform: uppercase;
     font-size: 1.5rem;
     font-weight: bold;
     letter-spacing: 0.3ch;
 
+    display: flex;
+    align-items: center;
+
     background: var(--bg-secondary);
     width: 100%;
+    height: 5rem;
 
+    padding-left: 2rem;
     margin-bottom: 1rem;
 }
   
-.logo img {
+#navbar-icon img {
+    width: 3rem;
+    height: 3rem;
+
     transform: rotate(0deg);
     transition: var(--transition-speed);
 }
 
-.navbar-logo-text {
+#navbar-icon span {
     display: inline;
 
     color: var(--text-secondary);
@@ -119,9 +93,54 @@ Description: Navigation bar stylesheet for "AI: The Inner Workings"
     transition: var(--transition-speed);
 }
   
-.navbar:hover .logo img {
+#navbar:hover #navbar-icon img {
     transform: rotate(-180deg);
     transition: var(--transition-speed);
+}
+
+
+/* ========================================================================= */
+
+
+/* Navigation Bar Item Styles */
+
+.navbar-item {
+    width: 100%;
+}
+
+.navbar-item:last-child {
+    /* Forces the last navigation bar element to the bottom */
+    margin-top: auto;
+}
+  
+.navbar-item a {
+    display: flex;
+    align-items: center;
+
+    color: var(--text-primary);
+    text-decoration: none;
+
+    height: 5rem;
+
+    transition: var(--transition-speed);
+}
+
+.navbar-item img {
+    width: 2.5rem;
+    height: 2.5rem;
+
+    margin: 0 1.25rem;
+    border-radius: 50%;
+}
+  
+.navbar-item a:hover {
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+}
+  
+.navbar-link-text {
+    display: none;
+    margin-left: 1rem;
 }
 
 
@@ -133,50 +152,56 @@ Description: Navigation bar stylesheet for "AI: The Inner Workings"
 /* For large screens */
 @media only screen and (min-width: 641px) and (min-height: 577px) {
     /* Positions the navbar at the left side of the site */
-    .navbar {
+    #navbar {
         width: 5rem;
         height: 100%;
         top: 0;
     }
 
     /* Darkens the area the navigation bar does not cover */
-    .navbar:hover + div {
+    #navbar:hover + div {
         width: 100vw;
     }
 
-    /* Expands the navbar when the user hovers over it */
-    .navbar:hover {
-        width: 20rem;
+    /* Makes the rest of the elements unclickable when the navigation bar
+    expands */
+    #navbar:hover ~ * {
+        pointer-events: none;
     }
 
-    /* Makes the link text visible when the user hovers over the navbar */
-    .navbar:hover .navbar-link-text {
-        display: inline;
+    /* Expands the navbar when the user hovers over it */
+    #navbar:hover {
+        width: 20rem;
     }
 
     /* Makes the title of the site appear after the arrows at the top of the
     navbar */
-    .navbar:hover .navbar-logo-text {
+    #navbar:hover #navbar-icon span {
         left: 80px;
+    }
+
+    /* Makes the link text visible when the user hovers over the navbar */
+    #navbar:hover .navbar-link-text {
+        display: inline;
     }
 }
 
 /* For small screens */
 @media only screen and (max-width: 640px) {
     /* Positions the navbar at the bottom of the site */
-    .navbar {
+    #navbar {
         width: 100vw;
         height: 5rem;
         bottom: 0;
     }
 
     /* Removes the arrows at the top of the navbar */
-    .logo {
+    #navbar-icon {
         display: none;
     }
 
     /* Arranges the elements in the navbar as a row */
-    .navbar > ul {
+    #navbar > ul {
         flex-direction: row;
     }
 
@@ -186,7 +211,7 @@ Description: Navigation bar stylesheet for "AI: The Inner Workings"
     }
 
     /* Aligns the navbar links to the center of their containers */
-    .navbar-link {
+    .navbar-item a {
         justify-content: center;
     }
 }
@@ -194,7 +219,7 @@ Description: Navigation bar stylesheet for "AI: The Inner Workings"
 /* For extremely small screens */
 @media only screen and (max-width: 480px) {
     /* Positions the navbar at the bottom of the site */
-    .navbar {
+    #navbar {
         width: 100vw;
         height: 3rem;
         bottom: 0;
@@ -207,12 +232,12 @@ Description: Navigation bar stylesheet for "AI: The Inner Workings"
     }
 
     /* Shrinks each link on the navigation bar */
-    .navbar-link {
+    .navbar-item a {
         height: 3rem;
     }
 
     /* Shrinks each icon on the navigation bar */
-    .navbar-link img {
+    .navbar-item img {
         width: 1.5rem;
         height: 1.5rem;
         margin: 0 0.75rem;
@@ -222,19 +247,19 @@ Description: Navigation bar stylesheet for "AI: The Inner Workings"
 /* For short screens */
 @media only screen and (max-height: 576px) {
     /* Positions the navbar at the bottom of the site */
-    .navbar {
+    #navbar {
         width: 100vw;
         height: 3rem;
         bottom: 0;
     }
 
     /* Removes the arrows at the top of the navbar */
-    .logo {
+    #navbar-icon {
         display: none;
     }
 
     /* Arranges the elements in the navbar as a row */
-    .navbar > ul {
+    #navbar > ul {
         flex-direction: row;
     }
 
@@ -250,13 +275,13 @@ Description: Navigation bar stylesheet for "AI: The Inner Workings"
     }
 
     /* Shrinks each link on the navigation bar and center-aligns them */
-    .navbar-link {
+    .navbar-item a {
         height: 3rem;
         justify-content: center;
     }
 
     /* Shrinks each icon on the navigation bar */
-    .navbar-link img {
+    .navbar-item img {
         width: 1.5rem;
         height: 1.5rem;
         margin: 0 0.75rem;

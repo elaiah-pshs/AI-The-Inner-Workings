@@ -4,14 +4,13 @@
     <head>
         <meta charset="UTF-8">
 
-        <!-- Helps the website scale well when the window is resized -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <meta name="author" content="Elaiah S. Asperin">
         <meta name="description" content="A website about AI">
         <meta name="keywords" content="Artificial Intelligence, AI">
         <meta name="date" content="12/21/2021">
-        <meta name="revised" content="12/24/2021">
+        <meta name="revised" content="12/28/2021">
 
         <link rel="icon" href="../images/icon.png">
 
@@ -24,67 +23,79 @@
         <title>AI: The Inner Workings</title>
     </head>
 
+
+
     <body>
-        <nav class="navbar">
+        <!--
+        Navigation Bar
+        - PC or large tablet: Fixed to the left and expands when hovered
+        - Any other device: Fixed to the bottom
+        -->
+        <nav id="navbar">
             <ul>
-                <li class="logo">
-                    <a href="#" class="navbar-link">
-                        <img src="../images/navbar/1-expand.svg" width="60px" height="60px">
-                        <span class="navbar-link-text navbar-logo-text">AI: The Inner Workings</span>
-                    </a>
+                <li id="navbar-icon">
+                    <img src="../images/navbar/1-expand.svg">
+                    <span class="navbar-link-text">AI: The Inner Workings</span>
                 </li>
                 
                 <li class="navbar-item">
-                    <a href="#" class="navbar-link">                       
-                        <img src="../images/navbar/2-home.svg" width="60px" height="60px">
+                    <a href="#">                       
+                        <img src="../images/navbar/2-home.svg">
                         <span class="navbar-link-text">Home</span>
                     </a>
                 </li>
                 
                 <li class="navbar-item">
-                    <a href="#" class="navbar-link">
-                        <img src="../images/navbar/3-intro.svg" width="60px" height="60px">
+                    <a href="#">
+                        <img src="../images/navbar/3-intro.svg">
                         <span class="navbar-link-text">Intro</span>
                     </a>
                 </li>
 
                 <li class="navbar-item">
-                    <a href="#" class="navbar-link">
-                        <img src="../images/navbar/4-myths.svg" width="60px" height="60px">
+                    <a href="#">
+                        <img src="../images/navbar/4-myths.svg">
                         <span class="navbar-link-text">Myths</span>
                     </a>
                 </li>
 
                 <li class="navbar-item">
-                    <a href="#" class="navbar-link">
-                        <img src="../images/navbar/5-development.svg" width="60px" height="60px">
+                    <a href="#">
+                        <img src="../images/navbar/5-development.svg">
                         <span class="navbar-link-text">Development</span>
                     </a>
                 </li>
 
                 <li class="navbar-item">
-                    <a href="#" class="navbar-link">
-                        <img src="../images/navbar/6-uses.svg" width="60px" height="60px">
+                    <a href="#">
+                        <img src="../images/navbar/6-uses.svg">
                         <span class="navbar-link-text">Uses</span>
                     </a>
                 </li>
 
                 <li class="navbar-item">
-                    <a href="#" class="navbar-link">
-                        <img src="../images/navbar/7-sources.svg" width="60px" height="60px">
+                    <a href="#">
+                        <img src="../images/navbar/7-sources.svg">
                         <span class="navbar-link-text">Sources</span>
                     </a>
                 </li>
             </ul>
         </nav>
 
-        <!-- I know it is bad to have empty divs but I really do not see
-        another easier solution so... -->
-        <div class="shader"></div>
+        <!-- Creates a translucent black pane over the rest of the site when
+        the navigation bar expands -->
+        <div></div>
+
+
 
         <!-- Main contents of the site, from title to footer -->
         <main>
-            <header class="page-header">
+            <!--
+            Page Header
+            - PC or large tablet: Text aligned to the center
+            - Any other device: Text aligned to the left
+             -->
+            <header id="page-header">
                 <h1>AI: The Inner Workings</h1>
                 <h2>How artificial intelligence really works</h2>
                 <a href="https://www.ai-cube.eu/events/17th-international-conference-on-artificial-intelligence-applications-and-innovations/">
@@ -92,73 +103,80 @@
                 </a>
             </header>
 
+
+
             <hr class="transition">
 
-            <section class="cards">
-                <header class="card-header card card-list-header">
-                    <img class="avatar" src="../images/navbar/2-home.svg">
-                    <svg class="half-circle" viewBox="0 0 106 57">
+
+
+            <!-- Navigation Cards -->
+            <section id="cards">
+                <header class="card">
+                    <img src="../images/navbar/2-home.svg">
+                    <svg viewBox="0 0 106 57">
                         <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
                     </svg>
 
-                    <a class="header-text">
+                    <div>
                         <p>AI: THE INNER WORKINGS</p>
                         <h2>Home</h2>
-                    </a>
+                    </div>
                 </header>
 
-                <nav class="card-list">
-                    <a class="card" href="#section-1">
-                        <header class="card-header">
-                            <img class="avatar" src="../images/home/icon1.svg">
-                            <svg class="half-circle" viewBox="0 0 106 57">
-                                <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
-                            </svg>
+                <a class="card" href="#section-1">
+                    <header class="card-header">
+                        <img src="../images/home/icon1.svg">
+                        <svg viewBox="0 0 106 57">
+                            <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
+                        </svg>
 
-                            <div class="header-text">
-                                <p>Section 1:</p>
-                                <h2>The Purpose</h2>
-                            </div>
-                        </header>
+                        <div>
+                            <p>Section 1:</p>
+                            <h2>The Purpose</h2>
+                        </div>
+                    </header>
 
-                        <img class="visual" src="../images/home/image1.jpg">
-                    </a>
+                    <img src="../images/home/image1.jpg">
+                </a>
 
-                    <a class="card" href="#section-2">
-                        <header class="card-header">
-                            <img class="avatar" src="../images/home/icon2.svg">
-                            <svg class="half-circle" viewBox="0 0 106 57">
-                                <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
-                            </svg>
+                <a class="card" href="#section-2">
+                    <header class="card-header">
+                        <img src="../images/home/icon2.svg">
+                        <svg viewBox="0 0 106 57">
+                            <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
+                        </svg>
 
-                            <div class="header-text">
-                                <p>Section 2:</p>
-                                <h2>The Goal</h2>
-                            </div>
-                        </header>
+                        <div>
+                            <p>Section 2:</p>
+                            <h2>The Goal</h2>
+                        </div>
+                    </header>
 
-                        <img class="visual" src="../images/home/image2.jpg">
-                    </a>
+                    <img src="../images/home/image2.jpg">
+                </a>
 
-                    <a class="card" href="#section-3">
-                        <header class="card-header">
-                            <img class="avatar" src="../images/home/icon3.svg">
-                            <svg class="half-circle" viewBox="0 0 106 57">
-                                <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
-                            </svg>
+                <a class="card" href="#section-3">
+                    <header class="card-header">
+                        <img src="../images/home/icon3.svg">
+                        <svg viewBox="0 0 106 57">
+                            <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
+                        </svg>
 
-                            <div class="header-text">
-                                <p>Section 3:</p>
-                                <h2>The Strategy</h2>
-                            </div>
-                        </header>
+                        <div>
+                            <p>Section 3:</p>
+                            <h2>The Strategy</h2>
+                        </div>
+                    </header>
 
-                        <img class="visual" src="../images/home/image3.jpg">
-                    </a>
-                </nav>
+                    <img src="../images/home/image3.jpg">
+                </a>
             </section>
 
+
+
             <hr class="transition">
+
+
 
             <section class="content" id="section-1">
                 <article>
@@ -191,7 +209,11 @@ Smith, et al. (2006).
                 </a>
             </section>
 
+
+
             <hr class="transition">
+
+
 
             <section class="content" id="section-2">
                 <a href="https://www.softwareone.com/en-fi/blog/articles/2021/04/05/implementing-artificial-intelligence-part-1">
@@ -200,31 +222,33 @@ Smith, et al. (2006).
                 <article>
                     <h3>The Goal</h3>
                     <p>
-
-This website aims to:
-<ul>
-<li>
-    Explain what artificial intelligence is to
-    people with little to no knowledge on
-    programming,
-</li>
-<li>
-    Explain why AI was created in the first place,
-</li>
-<li>
-    Expound on how an AI is created, and
-</li>
-<li>
-    Clear up some misconceptions about artificial
-    intelligence
-</li>
-</ul>
-
+                        This website aims to:
+                        <ul>
+                            <li>
+                                Explain what artificial intelligence is to
+                                people with little to no knowledge on
+                                programming,
+                            </li>
+                            <li>
+                                Explain why AI was created in the first place,
+                            </li>
+                            <li>
+                                Expound on how an AI is created, and
+                            </li>
+                            <li>
+                                Clear up some misconceptions about artificial
+                                intelligence
+                            </li>
+                        </ul>
                     </p>
                 </article>
             </section>
 
+
+
             <hr class="transition">
+
+
 
             <section class="content" id="section-3">
                 <article>
@@ -263,8 +287,14 @@ over it. There might be a hidden tooltip.
                 </a>
             </section>
 
-            <footer class="page-footer">
-                <div class="contact">
+
+            <!--
+            Page Footer
+            - Small to large screens: Displays normally
+            - Extremely small screens: Logo is removed
+            -->
+            <footer id="page-footer">
+                <section>
                     <h3>Contact me!</h3>
                     <p>Email:
                         <a href="mailto:esasperin@gmail.com">
@@ -280,7 +310,8 @@ over it. There might be a hidden tooltip.
                         <a href="https://twitter.com/MedsPogi">@MedsPogi</a>
                     </p>
                     <p>Discord: Meds Pogi#6105</p>
-                </div>
+                </section>
+
                 <a href="#top"><img src="../images/logo.png"></a>
             </footer>
         </main>

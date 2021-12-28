@@ -1,8 +1,8 @@
 /*
 Author: Elaiah S. Asperin
 Created: 24 December 2021
-Last Modified: 27 December 2021
-Description: Cards stylsheet for "AI: The Inner Workings"
+Last Modified: 28 December 2021
+Description: Content stylsheet for "AI: The Inner Workings"
 */
 
 
@@ -21,6 +21,11 @@ Description: Cards stylsheet for "AI: The Inner Workings"
     position: relative;
 }
 
+.content article {
+    text-align: justify;
+    padding: 1rem;
+}
+
 .content img {
     width: auto;
     height: auto;
@@ -31,19 +36,15 @@ Description: Cards stylsheet for "AI: The Inner Workings"
     border-radius: 1rem;
 }
 
-.content article {
-    text-align: justify;
-    padding: 1rem;
-}
-
 
 /* ========================================================================= */
 
 
 /* Media Queries */
 
-@media only screen and (max-width: 1016px) {
-    .content img {
-        padding: 0px 0px 0px 0px;
+@media only screen and (max-width: 532px) {
+    .content {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        padding: 1rem;
     }
 }

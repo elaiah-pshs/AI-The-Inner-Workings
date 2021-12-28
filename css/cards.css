@@ -1,7 +1,7 @@
 /*
 Author: Elaiah S. Asperin
 Created: 24 December 2021
-Last Modified: 27 December 2021
+Last Modified: 28 December 2021
 Description: Cards stylsheet for "AI: The Inner Workings"
 */
 
@@ -11,8 +11,9 @@ Description: Cards stylsheet for "AI: The Inner Workings"
 
 /* General Styles */
 
-.cards {
+#cards {
     display: flex;
+    align-items: center;
 
     background-color: #A3E3F3;
 
@@ -21,86 +22,7 @@ Description: Cards stylsheet for "AI: The Inner Workings"
     overflow-x: scroll;
 }
 
-.card-list-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    background: #071e3d;
-    box-shadow: -1rem 0 3rem #000;
-    border-radius: 1rem;
-
-    height: 350px;
-    width: 400px;
-    min-width: 250px;
-
-    padding: 1.5rem;
-    
-    margin-right: 1rem;
-
-    position: relative;
-
-    transition: 200ms;
-}
-
-.card-list {
-    display: flex;
-}
-
-.card, .card-list-header {
-    display: flex;
-    flex-direction: column;
-
-    background: #071e3d;
-    box-shadow: -1rem 0 3rem #000;
-    border-radius: 1rem;
-
-    height: 350px;
-    width: 400px;
-    min-width: 250px;
-
-    padding: 1.5rem;
-
-    position: relative;
-
-    transition: 200ms;
-}
-
-.card:hover {
-    transform: translateY(-1rem);
-}
-
-.card:hover ~ .card {
-    transform: translateX(130px);
-}
-
-.card:hover .header-text, .card-list-header:hover .header-text {
-    text-shadow: none;
-
-    background: linear-gradient(90deg, #26AFD9, #094978);
-    background-clip: text;
-
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-}
-
-.header-text p, .header-text h2 {
-    margin: 0px;
-}
-
-.card:not(:first-child) {
-    margin-left: -130px;
-}
-
-.card-header {
-    display: grid;
-    align-items: center;
-    grid-template-columns: 75px 1fr;
-
-    position: relative;
-}
-
-.card-header img {
+#cards header img {
     display: block;
 
     margin: 16px 10px;
@@ -110,7 +32,7 @@ Description: Cards stylsheet for "AI: The Inner Workings"
     height: 40px;
 }
 
-.card-header svg {
+#cards header svg {
     width: 60px;
     height: 48px;
 
@@ -125,13 +47,119 @@ Description: Cards stylsheet for "AI: The Inner Workings"
     pointer-events: none;
 }
 
-.card-list-header svg {
-    top: calc(50% - 10px);
+
+/* ========================================================================= */
+
+
+/* Header Card Styles */
+
+#cards > header {
+    flex-direction: row;
+    align-items: center;
+
+    margin-right: 2rem;
+}
+
+#cards > header svg {
     left: 1.5rem;
 }
 
-.visual {
+#cards > header div {
+    margin-left: 1.5rem;
+}
+
+
+/* ========================================================================= */
+
+
+/* Link Cards Styles */
+
+.card {
+    display: flex;
+    flex-direction: column;
+
+    background: #071e3d;
+    box-shadow: -1rem 0 3rem #000;
+    border-radius: 1rem;
+
+    height: 350px;
+    width: 400px;
+    min-width: 250px;
+
+    padding: 1.5rem;
+
+    position: relative;
+
+    transition: 200ms;
+}
+
+a.card ~ .card {
+    margin-left: -130px;
+}
+
+.card:hover {
+    transform: translateY(-1rem);
+}
+
+.card:hover div {
+    text-shadow: none;
+
+    background: linear-gradient(90deg, #26AFD9, #094978);
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+a.card:hover ~ .card {
+    transform: translateX(130px);
+}
+
+.card header {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 75px 1fr;
+
+    position: relative;
+}
+
+.card div * {
+    margin: 0px;
+}
+
+a.card > img {
     width: 100%;
     height: 15rem;
     border-radius: 1rem;
+}
+
+
+/* ========================================================================= */
+
+
+/* Media Queries */
+
+@media only screen and (max-width: 480px) {
+    #cards {
+        padding: 2rem;
+    }
+
+    #cards > header svg {
+        left: 0.75rem;
+    }
+
+    .card {    
+        height: 200px;
+        min-width: 175px;
+    
+        padding: 0.75rem;
+    }
+
+    a.card ~ .card {
+        margin-left: -60px;
+    }
+    
+    a.card:hover ~ .card {
+        transform: translateX(60px);
+    }    
 }
