@@ -34,6 +34,10 @@ Description: Footer stylesheet for "AI: The Inner Workings"
     margin: 0px;
 }
 
+#page-footer a {
+    transition: var(--transition-speed);
+}
+
 #page-footer img {
     width: 6.25rem;
     height: 6.25rem;

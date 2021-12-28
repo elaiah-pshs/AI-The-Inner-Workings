@@ -15,6 +15,7 @@ Description: General stylsheet for "AI: The Inner Workings"
 @import "page-header.css";
 @import "cards.css";
 @import "content.css";
+@import "wrap-up.css";
 @import "page-footer.css";
 
 
@@ -65,10 +66,33 @@ h1, h2, h3 {
     width: calc(100% - 200px);
     height: 6px;
 
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin: 3rem auto;
     border: 1px solid white;
     border-radius: 3px;
+}
+
+#return {
+    display: block;
+
+    width: 3rem;
+    height: 3rem;
+
+    margin-left: auto;
+
+    position: sticky;
+    top: 2rem;
+    z-index: 1;
+}
+
+#return img {
+    display: block;
+
+    width: 2rem;
+    height: 2rem;
+
+    margin-left: 1rem;
+
+    border-radius: 50%;
 }
 
 main a:link, main a:visited {
