@@ -1,7 +1,7 @@
 /*
 Author: Elaiah S. Asperin
 Created: 21 December 2021
-Last Modified: 28 December 2021
+Last Modified: 29 December 2021
 Description: General stylsheet for "AI: The Inner Workings"
 */
 
@@ -14,6 +14,7 @@ Description: General stylsheet for "AI: The Inner Workings"
 @import "navbar.css";
 @import "page-header.css";
 @import "cards.css";
+@import "myth.css";
 @import "content.css";
 @import "wrap-up.css";
 @import "page-footer.css";
@@ -26,10 +27,11 @@ Description: General stylsheet for "AI: The Inner Workings"
 
 :root {
     font-size: 16px;
-    font-family: "Century Gothic", sans-serif;
+    font-family: "Century Gothic", "Verdana", sans-serif;
 
     --text-primary: rgb(182, 182, 182);
     --text-secondary: rgb(236, 236, 236);
+    --text-gradient: linear-gradient(90deg, #26AFD9, #094978);
     --bg-primary: rgb(9, 73, 120);
     --bg-secondary: rgb(6, 50, 81);
     --transition-speed: 500ms;
@@ -56,7 +58,7 @@ main {
 }
 
 h1, h2, h3 {
-    font-family: "Roboto Mono", monospace;
+    font-family: "Roboto Mono", "Consolas", monospace;
 }
 
 .transition {

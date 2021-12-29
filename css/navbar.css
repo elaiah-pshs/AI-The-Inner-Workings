@@ -1,7 +1,7 @@
 /*
 Author: Elaiah S. Asperin
 Created: 21 December 2021
-Last Modified: 28 December 2021
+Last Modified: 29 December 2021
 Description: Navigation bar stylesheet for "AI: The Inner Workings"
 */
 
@@ -18,7 +18,7 @@ Description: Navigation bar stylesheet for "AI: The Inner Workings"
     background-color: var(--bg-primary);
 
     position: fixed;
-    z-index: 2;
+    z-index: 3;
 }
   
 #navbar > ul {
@@ -43,7 +43,7 @@ Description: Navigation bar stylesheet for "AI: The Inner Workings"
     height: 100vh;
 
     position: fixed;
-    z-index: 1;
+    z-index: 2;
 
     transition: var(--transition-speed);
 }

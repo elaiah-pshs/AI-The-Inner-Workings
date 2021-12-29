@@ -20,6 +20,20 @@
 
         <link rel="stylesheet" href="../css/index.css">
 
+        <script>
+            function flip(event){
+                var element = event.currentTarget;
+                if (element.className.search("myth") != -1) {
+                    if (element.style.transform == "rotateY(180deg)") {
+                        element.style.transform = "rotateY(0deg)";
+                    }
+                    else {
+                        element.style.transform = "rotateY(180deg)";
+                    }
+                }
+            };
+        </script>
+
         <title>AI: The Inner Workings</title>
     </head>
 
@@ -109,67 +123,179 @@
 
 
             <!-- Navigation Cards -->
-            <!-- <section id="cards">
+            <section id="cards">
                 <header class="card">
-                    <img src="../images/navbar/2-home.svg">
+                    <img src="../images/navbar/4-myths.svg">
                     <svg viewBox="0 0 106 57">
                         <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
                     </svg>
 
                     <div>
                         <p>AI: THE INNER WORKINGS</p>
-                        <h2>Home</h2>
+                        <h2>Myths</h2>
                     </div>
                 </header>
 
-                <a class="card" href="#section-1">
-                    <header class="card-header">
-                        <img src="../images/home/icon1.svg">
-                        <svg viewBox="0 0 106 57">
-                            <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
-                        </svg>
+                <section class="myth" onclick="flip(event)">
+                    <article class="front">
+                        <header class="card-header">
+                            <img src="../images/logo.png">
+                            <svg viewBox="0 0 106 57">
+                                <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
+                            </svg>
+    
+                            <div>
+                                <p>Myth 1:</p>
+                                <h2>The AI Trinity</h2>
+                            </div>
+                        </header>
+    
+                        <figure><img src="../images/logo.png"></figure>
+                    </article>
 
-                        <div>
-                            <p>Section 1:</p>
-                            <h2>The Purpose</h2>
-                        </div>
-                    </header>
+                    <article class="back">
+                        <q>
+                            Artificial Intelligence, Machine
+                            Learning, and Deep Learning are one and
+                            the same
+                        </q>
+                        <br>
+                        <a href="#">Bust!</a>
+                    </article>
+                </section>
 
-                    <img src="../images/home/image1.jpg">
-                </a>
+                <section class="myth" onclick="flip(event)">
+                    <article class="front">
+                        <header class="card-header">
+                            <img src="../images/logo.png">
+                            <svg viewBox="0 0 106 57">
+                                <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
+                            </svg>
+    
+                            <div>
+                                <p>Myth 2:</p>
+                                <h2>Intelligent Black Boxes</h2>
+                            </div>
+                        </header>
+    
+                        <figure><img src="../images/logo.png"></figure>
+                    </article>
 
-                <a class="card" href="#section-2">
-                    <header class="card-header">
-                        <img src="../images/home/icon2.svg">
-                        <svg viewBox="0 0 106 57">
-                            <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
-                        </svg>
+                    <article class="back">
+                        <q>
+                            All AI systems are “black boxes,” far less
+                            explainable than non-AI techniques
+                        </q>
+                        <br>
+                        <a href="#">Bust!</a>
+                    </article>
+                </section>
 
-                        <div>
-                            <p>Section 2:</p>
-                            <h2>The Goal</h2>
-                        </div>
-                    </header>
+                <section class="myth" onclick="flip(event)">
+                    <article class="front">
+                        <header class="card-header">
+                            <img src="../images/logo.png">
+                            <svg viewBox="0 0 106 57">
+                                <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
+                            </svg>
+    
+                            <div>
+                                <p>Myth 3:</p>
+                                <h2>It's All On The Data!</h2>
+                            </div>
+                        </header>
+    
+                        <figure><img src="../images/logo.png"></figure>
+                    </article>
 
-                    <img src="../images/home/image2.jpg">
-                </a>
+                    <article class="back">
+                        <q>
+                            AI systems are only as good as the data they train
+                            on
+                        </q>
+                        <br>
+                        <a href="#">Bust!</a>
+                    </article>
+                </section>
 
-                <a class="card" href="#section-3">
-                    <header class="card-header">
-                        <img src="../images/home/icon3.svg">
-                        <svg viewBox="0 0 106 57">
-                            <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
-                        </svg>
+                <section class="myth" onclick="flip(event)">
+                    <article class="front">
+                        <header class="card-header">
+                            <img src="../images/logo.png">
+                            <svg viewBox="0 0 106 57">
+                                <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
+                            </svg>
+    
+                            <div>
+                                <p>Myth 4:</p>
+                                <h2>Biased Calculations</h2>
+                            </div>
+                        </header>
+    
+                        <figure><img src="../images/logo.png"></figure>
+                    </article>
 
-                        <div>
-                            <p>Section 3:</p>
-                            <h2>The Strategy</h2>
-                        </div>
-                    </header>
+                    <article class="back">
+                        <q>
+                            AI systems are inherently unfair
+                        </q>
+                        <br>
+                        <a href="#">Bust!</a>
+                    </article>
+                </section>
 
-                    <img src="../images/home/image3.jpg">
-                </a>
-            </section> -->
+                <section class="myth" onclick="flip(event)">
+                    <article class="front">
+                        <header class="card-header">
+                            <img src="../images/logo.png">
+                            <svg viewBox="0 0 106 57">
+                                <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
+                            </svg>
+    
+                            <div>
+                                <p>Myth 5:</p>
+                                <h2>Robots At Work</h2>
+                            </div>
+                        </header>
+    
+                        <figure><img src="../images/logo.png"></figure>
+                    </article>
+
+                    <article class="back">
+                        <q>
+                            AI will make human labor obsolete
+                        </q>
+                        <br>
+                        <a href="#">Bust!</a>
+                    </article>
+                </section>
+
+                <section class="myth" onclick="flip(event)">
+                    <article class="front">
+                        <header class="card-header">
+                            <img src="../images/logo.png">
+                            <svg viewBox="0 0 106 57">
+                                <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
+                            </svg>
+    
+                            <div>
+                                <p>Myth 6:</p>
+                                <h2>Man vs. Machine</h2>
+                            </div>
+                        </header>
+    
+                        <figure><img src="../images/logo.png"></figure>
+                    </article>
+
+                    <article class="back">
+                        <q>
+                            AI is approaching human intelligence
+                        </q>
+                        <br>
+                        <a href="#">Bust!</a>
+                    </article>
+                </section>
+            </section>
 
 
 

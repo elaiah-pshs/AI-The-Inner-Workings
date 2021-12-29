@@ -1,7 +1,7 @@
 /*
 Author: Elaiah S. Asperin
 Created: 24 December 2021
-Last Modified: 28 December 2021
+Last Modified: 29 December 2021
 Description: Cards stylsheet for "AI: The Inner Workings"
 */
 
@@ -91,10 +91,10 @@ Description: Cards stylsheet for "AI: The Inner Workings"
 
     position: relative;
 
-    transition: 200ms;
+    transition: all 200ms;
 }
 
-a.card ~ .card {
+.card:not(header) ~ .card {
     margin-left: -130px;
 }
 
@@ -105,14 +105,14 @@ a.card ~ .card {
 .card:hover div {
     text-shadow: none;
 
-    background: linear-gradient(90deg, #26AFD9, #094978);
+    background: var(--text-gradient);
     background-clip: text;
 
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
 
-a.card:hover ~ .card {
+.card:not(header):hover ~ .card {
     transform: translateX(130px);
 }
 
@@ -130,7 +130,7 @@ a.card:hover ~ .card {
     margin: 0px;
 }
 
-a.card > figure {
+.card:not(header) figure {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -141,7 +141,7 @@ a.card > figure {
     margin: 0px;
 }
 
-a.card > figure > img {
+.card:not(header) figure > img {
     width: auto;
     height: auto;
     max-width: 100%;
@@ -149,16 +149,6 @@ a.card > figure > img {
     
     border-radius: 1rem;
     margin: auto 0;
-}
-
-
-/* ========================================================================= */
-
-
-/* Trivia Card Styles (for myths page only) */
-
-.trivia {
-    transform-style: preserve-3d;
 }
 
 
@@ -183,11 +173,11 @@ a.card > figure > img {
         padding: 0.75rem;
     }
 
-    a.card ~ .card {
+    .card:not(header) ~ .card {
         margin-left: -60px;
     }
     
-    a.card:hover ~ .card {
+    .card:not(header):hover ~ .card {
         transform: translateX(60px);
     }
 }
