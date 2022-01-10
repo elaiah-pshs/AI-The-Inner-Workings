@@ -27,3 +27,6 @@ Check out the explainations to all the code used in this website that you might 
 
 * The code for the card system right after each title is also inspired by the work of Jeff Dalaney on this Github repository:
     * [Stacked Card List](https://github.com/fireship-io/stacked-card-list)
+
+* The flipping cards found in the myths page contains code from Jacob Oakley on this Codepen:
+    * [Card Flip](https://codepen.io/jacoboakley/pen/ZpRbqB?editors=0010)

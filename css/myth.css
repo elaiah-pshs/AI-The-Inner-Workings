@@ -28,6 +28,19 @@ Description: Myths stylsheet for "AI: The Inner Workings"
     transform-style: preserve-3d;
 }
 
+.myth:not(header) ~ .myth {
+    margin-left: -130px;
+}
+
+.myth:hover {
+    transform: translateY(-1rem);
+}
+
+/* This rule functions like .card:not(header):hover ~ .card in cards.css */
+.myth:not(header):hover + .myth {
+    margin-left: 0px;
+}
+
 .myth .front, .myth .back {
     display: flex;
     flex-direction: column;
@@ -67,17 +80,9 @@ Description: Myths stylsheet for "AI: The Inner Workings"
 /* ========================================================================= */
 
 
-/* Link Cards Styles (Copy pasted from cards.css) */
+/* Front Styles (Mostly copy pasted from cards.css) */
 
-.myth:not(header) ~ .myth {
-    margin-left: -130px;
-}
-
-.myth:hover {
-    transform: translateY(-1rem);
-}
-
-.myth:hover div {
+.myth .front:hover div {
     text-shadow: none;
 
     background: var(--text-gradient);
@@ -87,12 +92,7 @@ Description: Myths stylsheet for "AI: The Inner Workings"
     -webkit-background-clip: text;
 }
 
-/* This rule functions like .card:not(header):hover ~ .card in cards.css */
-.myth:not(header):hover + .myth {
-    margin-left: 0px;
-}
-
-.myth header {
+.myth .front header {
     display: grid;
     align-items: center;
     grid-template-columns: 75px 1fr;
@@ -102,11 +102,11 @@ Description: Myths stylsheet for "AI: The Inner Workings"
     position: relative;
 }
 
-.myth div * {
+.myth .front div * {
     margin: 0px;
 }
 
-.myth:not(header) figure {
+.myth .front figure {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -117,7 +117,7 @@ Description: Myths stylsheet for "AI: The Inner Workings"
     margin: 0px;
 }
 
-.myth:not(header) figure > img {
+.myth .front figure > img {
     width: auto;
     height: auto;
     max-width: 100%;
@@ -125,6 +125,70 @@ Description: Myths stylsheet for "AI: The Inner Workings"
     
     border-radius: 1rem;
     margin: auto 0;
+}
+
+
+/* ========================================================================= */
+
+
+/* Back Styles */
+
+.myth .back q {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    height: 10rem;
+}
+
+.myth .back q::before, .myth .back q::after {
+    display: block;
+
+    font-size: 2rem;
+    text-align: center;
+}
+
+.bust-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--text-gradient);
+
+    width: 100%;
+    height: 5rem;
+
+    border-radius: 1rem;
+    padding: 0.25rem;
+
+    position: relative;
+}
+
+.bust-button div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #071e3d;
+
+    width: 100%;
+    height: 1rem;
+
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.bust-button p {
+    text-decoration: none;
+    font-size: 2rem;
+    text-shadow: none;
+
+    background: var(--text-gradient);
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
 }
 
 
@@ -145,5 +209,32 @@ Description: Myths stylsheet for "AI: The Inner Workings"
     
     .myth:not(header):hover ~ .myth {
         transform: translateX(60px);
+    }
+
+    .myth h2 {
+        font-size: 0.75rem;
+    }
+
+    .myth q {
+        height: 7.5rem;
+    }
+
+    .myth q::before, .myth q::after {
+        font-size: 1.5rem;
+    }
+
+    .myth .bust-button {
+        height: 2.5rem;
+        border-radius: 0.75rem;
+    }
+
+    .myth .bust-button div {
+        height: 1.5rem;
+        padding: 0.25rem;
+        border-radius: 0.75rem;
+    }
+
+    .myth .bust-button p {
+        font-size: 1.5rem;
     }
 }
