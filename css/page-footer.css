@@ -44,6 +44,16 @@ Description: Footer stylesheet for "AI: The Inner Workings"
     border-radius: 50%;
 }
 
+#page-footer a:link, #page-footer a:visited {
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+#page-footer a:hover, #page-footer a:active {
+    color: #A3E3F3;
+    text-decoration: none;
+}
+
 
 /* ========================================================================= */
 

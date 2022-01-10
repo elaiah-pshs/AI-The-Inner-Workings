@@ -212,11 +212,63 @@ Description: Myths stylsheet for "AI: The Inner Workings"
     }
 
     .myth h2 {
+        font-size: 0.9rem;
+    }
+
+    .myth p {
         font-size: 0.75rem;
     }
 
     .myth q {
-        height: 7.5rem;
+        font-size: 0.75rem;
+        height: 7.5rem; 
+    }
+
+    .myth q::before, .myth q::after {
+        font-size: 1.5rem;
+    }
+
+    .myth .bust-button {
+        height: 2.5rem;
+        border-radius: 0.75rem;
+    }
+
+    .myth .bust-button div {
+        height: 1.5rem;
+        padding: 0.25rem;
+        border-radius: 0.75rem;
+    }
+
+    .myth .bust-button p {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-height: 576px) {
+    .myth {    
+        height: 224px;
+        min-width: 199px;
+    }
+
+    .myth:not(header) ~ .myth {
+        margin-left: -60px;
+    }
+    
+    .myth:not(header):hover ~ .myth {
+        transform: translateX(60px);
+    }
+
+    .myth h2 {
+        font-size: 0.9rem;
+    }
+
+    .myth p {
+        font-size: 0.75rem;
+    }
+
+    .myth q {
+        font-size: 0.75rem;
+        height: 7.5rem; 
     }
 
     .myth q::before, .myth q::after {

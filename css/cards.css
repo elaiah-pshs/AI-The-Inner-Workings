@@ -173,6 +173,47 @@ Description: Cards stylsheet for "AI: The Inner Workings"
         padding: 0.75rem;
     }
 
+    .card h2 {
+        font-size: 0.9rem;
+    }
+
+    .card p {
+        font-size: 0.75rem;
+    }
+
+    .card:not(header) ~ .card {
+        margin-left: -60px;
+    }
+    
+    .card:not(header):hover ~ .card {
+        transform: translateX(60px);
+    }
+}
+
+@media only screen and (max-height: 576px) {
+    #cards {
+        padding: 2rem;
+    }
+
+    #cards > header svg {
+        left: 0.75rem;
+    }
+
+    .card {    
+        height: 200px;
+        min-width: 175px;
+    
+        padding: 0.75rem;
+    }
+
+    /* .card h2 {
+        font-size: 0.9rem;
+    }
+
+    .card p {
+        font-size: 0.75rem;
+    } */
+
     .card:not(header) ~ .card {
         margin-left: -60px;
     }
