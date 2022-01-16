@@ -1,7 +1,7 @@
 /*
 Author: Elaiah S. Asperin
 Created: 21 December 2021
-Last Modified: 28 December 2021
+Last Modified: 16 January 2021
 Description: Footer stylesheet for "AI: The Inner Workings"
 */
 
@@ -13,8 +13,8 @@ Description: Footer stylesheet for "AI: The Inner Workings"
 
 #page-footer {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
 
     background-color: rgb(7, 30, 61);
 
@@ -22,47 +22,58 @@ Description: Footer stylesheet for "AI: The Inner Workings"
     width: 100%;
     height: auto;
 
-    padding: 30px;
-    margin-top: 40px;
+    padding: 1rem 2rem;
+    margin-top: 2rem;
 }
 
-#page-footer h3 {
-    margin: 0px 0px 10px 0px;
-}
-
-#page-footer p {
-    margin: 0px;
-}
-
-#page-footer a {
+#page-footer > a {
+    display: flex;
+    align-items: center;
     transition: var(--transition-speed);
 }
 
 #page-footer img {
-    width: 6.25rem;
-    height: 6.25rem;
+    width: 2rem;
+    height: 2rem;
+
+    margin-right: 1rem;
     border-radius: 50%;
 }
 
-#page-footer a:link, #page-footer a:visited {
-    color: var(--text-primary);
-    text-decoration: none;
+#page-footer section {
+    display: flex;
 }
 
-#page-footer a:hover, #page-footer a:active {
-    color: #A3E3F3;
-    text-decoration: none;
+#page-footer section a {
+    background: url("../images/sprite.svg") no-repeat;
+    background-size: 12.5rem 2.5rem;
+
+    width: 2.5rem;
+    height: 2.5rem;
+
+    transition: var(--transition-speed);
 }
 
+#page-footer section a:hover {
+    transform: translateY(-0.25rem);
+}
 
-/* ========================================================================= */
+#page-footer section a:nth-child(2) {
+    background-position: -2.5rem 0px;
+}
 
+#page-footer section a:nth-child(3) {
+    background-position: -5rem 0px;
+}
 
-/* Media Queries */
+#page-footer section a:nth-child(4) {
+    background-position: -7.5rem 0px;
+}
 
-/* For extremely small screens */
-@media only screen and (max-width: 480px) {
-    #page-footer img {
-        display: none;
-    }
+#page-footer section a:nth-child(5) {
+    background-position: -10rem 0px;
+}
+
+#page-footer p {
+    font-size: 0.75rem;
 }
