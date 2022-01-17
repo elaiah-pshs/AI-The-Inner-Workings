@@ -1,0 +1,292 @@
+/*
+Author: Elaiah S. Asperin
+Created: 29 December 2021
+Last Modified: 17 January 2021
+Description: Cards stylsheet for the myths page of "AI: The Inner Workings"
+*/
+
+
+/* ========================================================================= */
+
+
+/* General Styles */
+
+.myth {
+    display: flex;
+    flex-direction: column;
+
+    height: 398px;
+    width: 448px;
+    min-width: 298px;
+
+    padding: 0px;
+
+    position: relative;
+
+    transition: all 200ms;
+
+    transform-style: preserve-3d;
+}
+
+.myth:not(header) ~ .myth {
+    margin-left: -130px;
+}
+
+.myth:hover {
+    transform: translateY(-1rem);
+}
+
+/* This rule functions like .card:not(header):hover ~ .card in cards.css */
+.myth:not(header):hover + .myth {
+    margin-left: 0px;
+}
+
+.myth .front, .myth .back {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: #071e3d;
+    box-shadow: -1rem 0 3rem #000;
+    border-radius: 1rem;
+
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+
+    padding: 1.5rem;
+
+    position: absolute;
+
+    transition: all 200ms;
+
+    backface-visibility: hidden;
+}
+
+.myth .back {
+    transform: rotateY(180deg);
+}
+
+.myth .front:hover {
+    transform: translateY(-1rem);
+}
+
+.myth .back:hover {
+    transform: rotateY(180deg) translateY(-1rem);
+}
+
+
+/* ========================================================================= */
+
+
+/* Front Styles (Mostly copy pasted from cards.css) */
+
+.myth .front:hover div {
+    text-shadow: none;
+
+    background: var(--text-gradient);
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.myth .front header {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 75px 1fr;
+
+    height: 5.25rem;
+
+    position: relative;
+}
+
+.myth .front div * {
+    margin: 0px;
+}
+
+.myth .front figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: calc(100% - 84px);
+
+    margin: 0px;
+}
+
+.myth .front figure > img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    
+    border-radius: 1rem;
+    margin: auto 0;
+}
+
+
+/* ========================================================================= */
+
+
+/* Back Styles */
+
+.myth .back q {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    height: 10rem;
+}
+
+.myth .back q::before, .myth .back q::after {
+    display: block;
+
+    font-size: 2rem;
+    text-align: center;
+}
+
+.myth .back .bust-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--text-gradient);
+
+    width: 100%;
+    height: 5rem;
+
+    border-radius: 1rem;
+    padding: 0.25rem;
+
+    position: relative;
+}
+
+.myth .back .bust-button div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #071e3d;
+
+    width: 100%;
+    height: 1rem;
+
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.myth .back .bust-button p {
+    text-decoration: none;
+    font-size: 2rem;
+    text-shadow: none;
+
+    background: var(--text-gradient);
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+
+/* ========================================================================= */
+
+
+/* Media Queries */
+
+@media only screen and (max-width: 480px) {
+    .myth {    
+        height: 224px;
+        min-width: 199px;
+    }
+
+    .myth:not(header) ~ .myth {
+        margin-left: -60px;
+    }
+    
+    .myth:not(header):hover ~ .myth {
+        transform: translateX(60px);
+    }
+
+    .myth h2 {
+        font-size: 0.9rem;
+    }
+
+    .myth p {
+        font-size: 0.75rem;
+    }
+
+    .myth q {
+        font-size: 0.75rem;
+        height: 7.5rem; 
+    }
+
+    .myth q::before, .myth q::after {
+        font-size: 1.5rem;
+    }
+
+    .myth .back .bust-button {
+        height: 2.5rem;
+        border-radius: 0.75rem;
+    }
+
+    .myth .back .bust-button div {
+        height: 1.5rem;
+        padding: 0.25rem;
+        border-radius: 0.75rem;
+    }
+
+    .myth .back .bust-button p {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-height: 576px) {
+    .myth {    
+        height: 224px;
+        min-width: 199px;
+    }
+
+    .myth:not(header) ~ .myth {
+        margin-left: -60px;
+    }
+    
+    .myth:not(header):hover ~ .myth {
+        transform: translateX(60px);
+    }
+
+    .myth h2 {
+        font-size: 0.9rem;
+    }
+
+    .myth p {
+        font-size: 0.75rem;
+    }
+
+    .myth q {
+        font-size: 0.75rem;
+        height: 7.5rem; 
+    }
+
+    .myth q::before, .myth q::after {
+        font-size: 1.5rem;
+    }
+
+    .myth .back .bust-button {
+        height: 2.5rem;
+        border-radius: 0.75rem;
+    }
+
+    .myth .back .bust-button div {
+        height: 1.5rem;
+        padding: 0.25rem;
+        border-radius: 0.75rem;
+    }
+
+    .myth .back .bust-button p {
+        font-size: 1.5rem;
+    }
+}

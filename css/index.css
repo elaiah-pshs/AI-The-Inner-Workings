@@ -1,7 +1,7 @@
 /*
 Author: Elaiah S. Asperin
 Created: 21 December 2021
-Last Modified: 16 January 2022
+Last Modified: 17 January 2022
 Description: General stylsheet for "AI: The Inner Workings"
 */
 
@@ -14,8 +14,9 @@ Description: General stylsheet for "AI: The Inner Workings"
 @import "navbar.css";
 @import "page-header.css";
 @import "cards.css";
-@import "myth.css";
+@import "myths-cards.css";
 @import "content.css";
+@import "myths-content.css";
 @import "wrap-up.css";
 @import "page-footer.css";
 
