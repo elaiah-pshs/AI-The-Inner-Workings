@@ -1,7 +1,7 @@
 /*
 Author: Elaiah S. Asperin
 Created: 28 December 2021
-Last Modified: 28 December 2021
+Last Modified: 20 January 2021
 Description: Content stylsheet for "AI: The Inner Workings"
 */
 
@@ -34,6 +34,15 @@ Description: Content stylsheet for "AI: The Inner Workings"
 #wrap-up iframe {
     width: 100%;
     height: 22.5rem;
+}
+
+#website-wrap-up {
+    display: flex;
+    flex-direction: column;
+}
+
+#website-wrap-up > * {
+    text-align: center;
 }
 
 
