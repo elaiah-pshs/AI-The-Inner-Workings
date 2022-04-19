@@ -1,7 +1,7 @@
 /*
 Author: Elaiah S. Asperin
 Created: 21 December 2021
-Last Modified: 17 January 2022
+Last Modified: 19 April 2022
 Description: General stylsheet for "AI: The Inner Workings"
 */
 
@@ -49,6 +49,30 @@ body {
     padding: 0px;
 
     overflow-x: hidden;
+}
+
+#skip {
+    color: var(--text-primary);
+    text-align: center;
+    text-decoration: none;
+    
+    background: var(--bg-primary);
+
+    padding: 0.5rem 1.5rem;
+
+    border-radius: 0px 0px 0.25rem 0.25rem;
+
+    position: absolute;
+    left: 0.5rem;
+    z-index: 4;
+
+    transform: translateY(-120%);
+    transition: var(--transition-speed);
+}
+
+#skip:focus {
+    color: var(--text-primary);
+    transform: translateY(0%);
 }
 
 main {
