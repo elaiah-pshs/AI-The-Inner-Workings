@@ -1,7 +1,7 @@
 /*
 Author: Elaiah S. Asperin
 Created: 21 December 2021
-Last Modified: 19 April 2022
+Last Modified: 20 April 2022
 Description: General stylsheet for "AI: The Inner Workings"
 */
 
@@ -42,6 +42,11 @@ Description: General stylsheet for "AI: The Inner Workings"
     --transition-speed: 500ms;
 }
 
+:focus {
+    outline: 0.25rem solid #A3E3F3;
+    outline-offset: 0.125rem;
+}
+
 body {
     background-color: rgb(10, 20, 31);
 
@@ -49,35 +54,6 @@ body {
     padding: 0px;
 
     overflow-x: hidden;
-}
-
-#skip {
-    color: var(--text-primary);
-    text-align: center;
-    text-decoration: none;
-    
-    background: var(--bg-primary);
-
-    padding: 0.5rem 1.5rem;
-
-    border-radius: 0px 0px 0.25rem 0.25rem;
-
-    position: absolute;
-    left: 0.5rem;
-    z-index: 4;
-
-    transform: translateY(-120%);
-    transition: var(--transition-speed);
-}
-
-#skip:focus {
-    color: var(--text-primary);
-    transform: translateY(0%);
-}
-
-#skip:focus-visible {
-    outline: 0.25rem solid var(--bg-secondary);
-    outline-offset: 0px;
 }
 
 main {
@@ -102,13 +78,36 @@ h1, h2, h3 {
     border-radius: 3px;
 }
 
+#skip {
+    color: var(--text-primary);
+    text-align: center;
+    text-decoration: none;
+    
+    background: var(--bg-primary);
+
+    padding: 0.5rem 1.5rem;
+
+    border-radius: 0px 0px 0.25rem 0.25rem;
+
+    position: absolute;
+    left: 0.5rem;
+    z-index: 4;
+
+    transform: translateY(-120%);
+    transition: var(--transition-speed);
+}
+
+#skip:focus {
+    transform: translateY(0%);
+}
+
 #return {
     display: block;
 
-    width: 3rem;
-    height: 3rem;
+    width: 2rem;
+    height: 2rem;
 
-    margin-left: auto;
+    margin: 0px 0px 1rem auto;
 
     position: sticky;
     top: 2rem;
@@ -121,8 +120,6 @@ h1, h2, h3 {
     width: 2rem;
     height: 2rem;
 
-    margin-left: 1rem;
-
     border-radius: 50%;
 }
 
@@ -130,6 +127,7 @@ main a:link, main a:visited {
     color: var(--text-primary);
     text-decoration: none;
 }
+
 
 article a:link, article a:visited {
     transition: var(--transition-speed);
