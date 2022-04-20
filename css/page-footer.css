@@ -1,7 +1,7 @@
 /*
 Author: Elaiah S. Asperin
 Created: 21 December 2021
-Last Modified: 16 January 2021
+Last Modified: 20 April 2022
 Description: Footer stylesheet for "AI: The Inner Workings"
 */
 
@@ -54,7 +54,7 @@ Description: Footer stylesheet for "AI: The Inner Workings"
     transition: var(--transition-speed);
 }
 
-#page-footer section a:hover {
+#page-footer section a:hover, #page-footer section a:focus {
     transform: translateY(-0.25rem);
 }
 

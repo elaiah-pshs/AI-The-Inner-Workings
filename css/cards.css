@@ -1,7 +1,7 @@
 /*
 Author: Elaiah S. Asperin
 Created: 24 December 2021
-Last Modified: 29 December 2021
+Last Modified: 20 April 2022
 Description: Cards stylsheet for "AI: The Inner Workings"
 */
 
@@ -98,11 +98,11 @@ Description: Cards stylsheet for "AI: The Inner Workings"
     margin-left: -130px;
 }
 
-.card:hover {
+.card:hover, .card:focus {
     transform: translateY(-1rem);
 }
 
-.card:hover div {
+.card:hover div, .card:focus div {
     text-shadow: none;
 
     background: var(--text-gradient);
@@ -112,7 +112,7 @@ Description: Cards stylsheet for "AI: The Inner Workings"
     -webkit-background-clip: text;
 }
 
-.card:not(header):hover ~ .card {
+.card:not(header):hover ~ .card, .card:not(header):focus ~ .card {
     transform: translateX(130px);
 }
 
@@ -185,7 +185,7 @@ Description: Cards stylsheet for "AI: The Inner Workings"
         margin-left: -60px;
     }
     
-    .card:not(header):hover ~ .card {
+    .card:not(header):hover ~ .card, .card:not(header):focus ~ .card {
         transform: translateX(60px);
     }
 }
@@ -206,19 +206,11 @@ Description: Cards stylsheet for "AI: The Inner Workings"
         padding: 0.75rem;
     }
 
-    /* .card h2 {
-        font-size: 0.9rem;
-    }
-
-    .card p {
-        font-size: 0.75rem;
-    } */
-
     .card:not(header) ~ .card {
         margin-left: -60px;
     }
     
-    .card:not(header):hover ~ .card {
+    .card:not(header):hover ~ .card, .card:not(header):focus ~ .card {
         transform: translateX(60px);
     }
 }

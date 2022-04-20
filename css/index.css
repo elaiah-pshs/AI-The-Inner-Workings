@@ -133,7 +133,7 @@ article a:link, article a:visited {
     transition: var(--transition-speed);
 }
 
-main a:hover, main a:active {
+main a:hover, main a:focus, main a:active {
     color: #A3E3F3;
     text-decoration: none;
 }

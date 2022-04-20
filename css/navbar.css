@@ -1,7 +1,7 @@
 /*
 Author: Elaiah S. Asperin
 Created: 21 December 2021
-Last Modified: 29 December 2021
+Last Modified: 20 April 2022
 Description: Navigation bar stylesheet for "AI: The Inner Workings"
 */
 
@@ -93,7 +93,7 @@ Description: Navigation bar stylesheet for "AI: The Inner Workings"
     transition: var(--transition-speed);
 }
   
-#navbar:hover #navbar-icon img {
+#navbar:hover #navbar-icon img, #navbar:focus-within #navbar-icon img {
     transform: rotate(-180deg);
     transition: var(--transition-speed);
 }
@@ -133,7 +133,7 @@ Description: Navigation bar stylesheet for "AI: The Inner Workings"
     border-radius: 50%;
 }
   
-.navbar-item a:hover {
+.navbar-item a:hover, .navbar-item a:focus {
     background: var(--bg-primary);
     color: var(--text-primary);
 }
@@ -159,29 +159,29 @@ Description: Navigation bar stylesheet for "AI: The Inner Workings"
     }
 
     /* Darkens the area the navigation bar does not cover */
-    #navbar:hover + div {
+    #navbar:hover + div, #navbar:focus-within + div {
         width: 100vw;
     }
 
     /* Makes the rest of the elements unclickable when the navigation bar
     expands */
-    #navbar:hover ~ * {
+    #navbar:hover ~ *, #navbar:focus-within ~ * {
         pointer-events: none;
     }
 
     /* Expands the navbar when the user hovers over it */
-    #navbar:hover {
+    #navbar:hover, #navbar:focus-within {
         width: 20rem;
     }
 
     /* Makes the title of the site appear after the arrows at the top of the
     navbar */
-    #navbar:hover #navbar-icon span {
+    #navbar:hover #navbar-icon span, #navbar:focus-within #navbar-icon span {
         left: 80px;
     }
 
     /* Makes the link text visible when the user hovers over the navbar */
-    #navbar:hover .navbar-link-text {
+    #navbar:hover .navbar-link-text, #navbar:focus-within .navbar-link-text {
         display: inline;
     }
 }
