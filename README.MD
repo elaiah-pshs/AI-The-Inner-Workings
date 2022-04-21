@@ -30,3 +30,21 @@ Check out the explainations to all the code used in this website that you might 
 
 * The flipping cards found in the myths page contains code from Jacob Oakley on this Codepen:
     * [Card Flip](https://codepen.io/jacoboakley/pen/ZpRbqB?editors=0010)
+
+
+## Planned Changes
+1. We will add a quiz at the end of the website to test how much the reader learned from reading through the website
+    * The quiz can be accessed from the end of the uses page
+    * When the user clicks on the link, they will be directed to a site that briefs them about the quiz.
+    * When the user clicks the start button, they will be redirected to the page containing the quiz.
+    * The quiz will have 10 multiple choice questions which will be randomly selected from a set of 42 multiple choice questions.
+    * After submitting, the user will see their score and the correct answers to all the items in the quiz. There will also be a button to go back to the home page.
+2. We will improve the myths page by:
+    * Removing the card flipping feature (this is a massive accessibility issue)
+    * Changing the content section to a true or false type quiz 
+3. We will improve the accessibility of the website by adding:
+    * An option to enable/disable animations
+    * An option to switch between light/dark mode
+    * `:focus` styles for keyboard navigators and readers using mobile devices
+    * A "skip to content" button for keyboard navigators
+4. If we have time, we will add parallax scrolling and a 3d animated background (most likely implemented via three.js)
