@@ -38,7 +38,10 @@ Check out the explainations to all the code used in this website that you might 
     * When the user clicks on the link, they will be directed to a site that briefs them about the quiz.
     * When the user clicks the start button, they will be redirected to the page containing the quiz.
     * The quiz will have 10 multiple choice questions which will be randomly selected from a set of 42 multiple choice questions.
-    * After submitting, the user will see their score and the correct answers to all the items in the quiz. There will also be a button to go back to the home page.
+    * After submitting, the user will see their score and the correct answers to all the items in the quiz.
+    * The user will also see their scores from previous attempts. They will also be able to compare their old answers to their new answers side by side.
+    * The user will be given links to the topics of the questions asked to them.
+    * Finally, there will be a button to go back to the home page.
 2. We will improve the myths page by:
     * Removing the card flipping feature (this is a massive accessibility issue)
     * Changing the content section to a true or false type quiz 
